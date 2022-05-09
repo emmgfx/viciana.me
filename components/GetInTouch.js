@@ -32,7 +32,7 @@ const GetInTouch = () => {
       </p>
       <div className="h-6" />
 
-      <ul className="flex justify-center gap-12">
+      <ul className="flex justify-center gap-6 sm:gap-12">
         <SocialLink url="https://www.emm-gfx.net" title="Wordpress">
           <IconWordpress />
         </SocialLink>
