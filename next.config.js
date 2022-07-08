@@ -4,7 +4,7 @@ const path = require("path");
 const nextConfig = {
   experimental: {
     images: {
-      layoutRaw: true,
+      allowFutureImage: true,
     },
   },
   reactStrictMode: true,

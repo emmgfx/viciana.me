@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/future/image";
 
 import me from "../public/images/me.webp";
 
@@ -30,7 +30,6 @@ const Presentation = () => {
           width={560}
           height={560}
           className="absolute right-0 motion-safe:animate-floating-me select-none"
-          layout="raw"
           alt=""
         />
       </div>
