@@ -2,6 +2,9 @@ const path = require("path");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ["www.emm-gfx.net"],
+  },
   experimental: {
     images: {
       allowFutureImage: true,

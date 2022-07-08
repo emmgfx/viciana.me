@@ -1,12 +1,13 @@
 import Head from "next/head";
 import AboutMe from "../components/AboutMe";
 import Articles from "../components/Articles";
+import Projects from "../components/Projects";
 import Companies from "../components/Companies";
 import GetInTouch from "../components/GetInTouch";
 import Header from "../components/Header";
 import Presentation from "../components/Presentation";
 
-export default function Home({ articles }) {
+export default function Home({ articles = [], projects = [] }) {
   return (
     <div className="sm:container mx-auto px-5 md:px-10 2xl:max-w-[1320px]">
       <Head>
@@ -32,6 +33,8 @@ export default function Home({ articles }) {
       <Presentation />
       <AboutMe />
       <div className="h-16" />
+      <Projects projects={projects} />
+      <div className="h-16" />
       <Companies />
       <div className="h-16" />
       <Articles articles={articles} />
@@ -42,13 +45,29 @@ export default function Home({ articles }) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch(
-    "https://emm-gfx.net/wp-json/wp/v2/posts?_fields=id,date,link,title,excerpt.rendered"
+  const api = "https://emm-gfx.net/wp-json/wp/v2";
+
+  const articles = await fetch(`${api}/posts`).then((res) => res.json());
+
+  const projects = await fetch(`${api}/project?_embed`).then((res) =>
+    res.json()
   );
-  const articles = await response.json();
 
   return {
-    props: { articles },
+    props: {
+      articles: articles.map((article) => ({ ...article })),
+      projects: projects.map((project) => ({
+        id: project.id,
+        title: project.title.rendered,
+        description: project.content.rendered,
+        image: {
+          url: project._embedded["wp:featuredmedia"][0].source_url,
+          width: project._embedded["wp:featuredmedia"][0].media_details.width,
+          height: project._embedded["wp:featuredmedia"][0].media_details.height,
+        },
+        url: project.acf.project_url,
+      })),
+    },
     revalidate: 86400, // 1 day
   };
 }

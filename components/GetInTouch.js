@@ -11,7 +11,7 @@ const GetInTouch = () => {
       id="get-in-touch"
       className="text-center max-w-2xl mx-auto text-lg mb-24 leading-8"
     >
-      <SectionTitle>04. Get in touch</SectionTitle>
+      <SectionTitle>05. Get in touch</SectionTitle>
       <div className="h-6" />
       <p>
         Fortunately, it&apos;s been a long time since I quit social media, so
