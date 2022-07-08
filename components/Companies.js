@@ -7,8 +7,8 @@ import LogoKec from "../public/images/logos/kec.svg";
 
 const Companies = () => {
   return (
-    <section id="work">
       <SectionTitle>02. I’ve worked in projects for...</SectionTitle>
+    <section>
       <div className="h-4" />
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 items-center justify-items-center">
         <LogoKec />
