@@ -4,7 +4,7 @@ import IconArrow from "../public/images/icons/icon-arrow-right.svg";
 
 const Project = ({ project }) => {
   return (
-    <article className="basis-3/4 shrink-0 md:basis-auto md:shrink">
+    <article className="basis-4/5 snap-start shrink-0 md:basis-auto md:shrink">
       <img
         src={project.image.url}
         alt={project.title}
