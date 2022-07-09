@@ -2,15 +2,6 @@ import { decode } from "html-entities";
 
 import IconArrow from "../public/images/icons/icon-arrow-right.svg";
 
-// const convertHTMLEntity = (text) => {
-//   const span = document.createElement("span");
-
-//   return text.replace(/&[#A-Za-z0-9]+;/gi, (entity, position, text) => {
-//     span.innerHTML = entity;
-//     return span.innerText;
-//   });
-// };
-
 const Project = ({ project }) => {
   return (
     <article>
