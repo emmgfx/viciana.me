@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown-alert {
+  --color-border-default: #30363d;
+  --color-accent-fg: #58a6ff;
+  --color-accent-emphasis: #1f6feb;
+  --color-danger-fg: #f85149;
+  --color-danger-emphasis: #da3633;
+  --color-attention-fg: #d29922;
+  --color-attention-emphasis: #9e6a03;
+  --color-done-fg: #a371f7;
+  --color-done-emphasis: #8957e5;
+  --color-success-fg: #3fb950;
+  --color-success-emphasis: #238636;
+}
+
+.markdown-alert {
+  @apply pl-4 py-0 border-l-4 border-l-[var(--color-accent-emphasis)] text-sm text-slate-400;
+}
+
+.markdown-alert p, .markdown-alert h1 {
+  @apply my-2;
+}
+
+.markdown-alert>:last-child {
+  @apply mb-0;
+}
+
+.markdown-alert .markdown-alert-title {
+  @apply flex items-center text-[var(--color-accent-emphasis)] font-semibold gap-2 mt-0;
+}
+
+.markdown-alert .markdown-alert-title svg {
+  @apply block size-4;
+  fill: currentColor
+}
