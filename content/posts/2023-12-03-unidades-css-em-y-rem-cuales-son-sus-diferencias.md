@@ -10,6 +10,7 @@ tags:
   - REM
 categories:
   - Frontend
+excerpt: La diferencia básica entre los dos es muy sencilla, lo complicado es escoger bien cuándo utilizar cada una.
 ---
 
 No estaba pensando en escribir sobre esto, pero mientras planteaba el contenido del próximo articulo y repasaba algunos temas he visto que no siempre se utilizan bien estas unidades de medida, yo tampoco. Así que me ha parecido buena idea darle un repaso rápido al tema.

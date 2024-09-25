@@ -10,7 +10,7 @@ tags:
   - Technology
 categories: []
 type: default
-excerpt: I would like that this post to serve as an ending to the project wich I worked on for a while. Even while the end of the Stadia and as a consequence also the close for Stadiaffinity, made me feel truly sad I need to say that both projects were a good thing for me. I learned a lot while building Stadiaffinity, and met some great people from the Stadia community.
+excerpt: I would like that this post to serve as an ending to the project wich I worked on for a while. Even while the end of the Stadia (and Stadiaffinity, as a consecuence), made me feel truly sad I need to say that both projects were a good thing for me.
 ---
 
 I would like that this post to serve as an ending to the project wich I worked on for a while. Even while the end of the Stadia (and Stadiaffinity, as a consecuence), made me feel truly sad I need to say that both projects were a good thing for me. I learned a lot while building Stadiaffinity, and met some great people from the Stadia community.
