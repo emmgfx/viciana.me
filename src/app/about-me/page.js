@@ -1,4 +1,4 @@
-import { Intro, IntroTitle } from "@/components/Intro";
+import { Intro, IntroTitle, IntroText } from "@/components/Intro";
 import { SocialLinks } from "@/components/SocialLinks";
 import Image from "next/image";
 
@@ -7,8 +7,11 @@ export default async function AboutMe() {
     <>
       <Intro>
         <IntroTitle>About me</IntroTitle>
+        <IntroText>
+          <em>&laquo;Un poco más de esto nuestro&raquo;</em>
+        </IntroText>
       </Intro>
-      <div className="grid md:grid-cols-[7fr_3fr] gap-8">
+      <div className="grid md:grid-cols-[7fr_3fr] gap-12">
         <div className="order-2 md:order-1">
           <Description />
         </div>
@@ -62,7 +65,7 @@ const Description = () => {
 
 const Sidebar = () => {
   return (
-    <div className="grid grid-cols-[30fr_60fr] items-center gap-4 md:flex md:flex-col md:items-start">
+    <div className="grid grid-cols-[30fr_60fr] items-center gap-8 md:flex md:flex-col md:items-start">
       <div className="shrink">
         <Image
           src="/avatar.jpeg"
