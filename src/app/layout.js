@@ -19,7 +19,9 @@ export default function RootLayout({ children }) {
         className={`flex flex-col min-h-screen bg-slate-900 text-slate-100 ${inter.className}`}
       >
         <Header />
-        <main className="mx-auto w-full max-w-5xl grow px-8">{children}</main>
+        <main className="mx-auto w-full max-w-5xl grow px-4 md:px-8">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
