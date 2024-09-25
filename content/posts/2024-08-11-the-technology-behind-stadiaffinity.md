@@ -13,7 +13,7 @@ type: default
 excerpt: I would like that this post to serve as an ending to the project wich I worked on for a while. Even while the end of the Stadia (and Stadiaffinity, as a consecuence), made me feel truly sad I need to say that both projects were a good thing for me.
 ---
 
-I would like that this post to serve as an ending to the project wich I worked on for a while. Even while the end of the Stadia (and Stadiaffinity, as a consecuence), made me feel truly sad I need to say that both projects were a good thing for me. I learned a lot while building Stadiaffinity, and met some great people from the Stadia community.
+I would like that this post to serve as an ending to the project wich I worked on for a while. Even while the end of the Stadia (and Stadiaffinity, as a consecuence), made me feel truly sad I need to say that both projects were a good thing for me. I learned a lot while building Stadiaffinity and met some great people from the Stadia community.
 
 ## A brief introduction to Stadiaffinity
 
@@ -110,7 +110,7 @@ No Man's Sky:        0         5         0
 # Total coincidence: 15
 ```
 
-But what we do with this information? Look the following diagrams. The two diagrams starts with the same three games and the same average rating. The first one shows an scenario where the same three users rated the games, and the second one shows a parallel scenario where the other users doesn't rated the same games.
+But what do we do with this information? Look the following diagrams. The two diagrams starts with the same three games and the same average rating. The first one shows an scenario where the same three users rated the games, and the second one shows a parallel scenario where the other users doesn't rated the same games.
 
 ![Diagram 1](/post_images/stadiaffinity-diagram-1.png)
 ![Diagram 2](/post_images/stadiaffinity-diagram-2.png)
