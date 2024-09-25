@@ -25,15 +25,15 @@ export default async function Home() {
       <div className="h-14" />
       <Photos />
       <div className="h-24" />
-      <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 max-w-xl lg:max-w-none mx-auto">
-        <div className="lg:col-span-6">
+      <div className="grid grid-cols-1 md:grid-cols-12 max-w-lg md:max-w-none gap-16 mx-auto">
+        <div className="md:col-span-7">
           <ArticlesList
-            className="space-y-16 mx-auto lg:col-span-6"
+            className="space-y-16 mx-auto md:col-span-6"
             posts={posts}
             variant={PostItemSmall}
           />
         </div>
-        <div className="lg:col-span-4 space-y-8">
+        <div className="md:col-span-5 space-y-8">
           <Card>
             <h2 className="text-sm font-semibold">Work</h2>
             <div className="h-4" />
