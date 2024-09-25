@@ -1,6 +1,5 @@
 import { ArticlesList } from "@/components/ArticlesList";
-import { Intro } from "@/components/Intro";
-import { PostItemSmall } from "@/components/PostItemSmall";
+import { Intro, IntroText, IntroTitle } from "@/components/Intro";
 import { getAllPosts, getAllTags } from "@/shared/api";
 import { notFound } from "next/navigation";
 
@@ -12,11 +11,11 @@ export async function generateStaticParams() {
 }
 
 export default async function Tag({ params }) {
-  const posts = getAllPosts().filter((post) =>
+  const posts = getAllPosts(0, 999).filter((post) =>
     post.data.tags.some((tag) => tag.slug === params.slug)
   );
 
-  if (!posts) notFound();
+  if (!posts || posts.length === 0) notFound();
 
   const tagObject = posts
     .at(0)
@@ -24,17 +23,16 @@ export default async function Tag({ params }) {
 
   return (
     <>
-      <Intro
-        title={<>Articles tagged under &laquo;{tagObject.name}&raquo;</>}
-      />
+      <Intro>
+        <IntroTitle>Searching by tag</IntroTitle>
+        <IntroText>
+          Articles tagged under &laquo;{tagObject.name}&raquo;
+        </IntroText>
+      </Intro>
 
       <div className="h-14" />
 
-      <ArticlesList
-        className="flex  flex-col space-y-16 "
-        variant={PostItemSmall}
-        posts={posts}
-      />
+      <ArticlesList className="space-y-16" posts={posts} />
     </>
   );
 }
