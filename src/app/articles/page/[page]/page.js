@@ -1,8 +1,8 @@
 import { ArticlesList } from "@/components/ArticlesList";
-import { Intro } from "@/components/Intro";
+import { Intro, IntroText, IntroTitle } from "@/components/Intro";
 import { Pager } from "@/components/Pager";
 
-import { getAllPosts, getPostBySlug, getPostsCount } from "@/shared/api";
+import { getAllPosts, getPostsCount } from "@/shared/api";
 import { POSTS_PER_PAGE } from "@/shared/constants";
 
 export async function generateStaticParams() {
@@ -20,10 +20,13 @@ export default async function Articles({ params }) {
 
   return (
     <>
-      <Intro
-        title="Articles"
-        text={`Latest articles written by me, for no reason. Page ${currentPage} of ${pages}`}
-      />
+      <Intro>
+        <IntroTitle>Articles</IntroTitle>
+        <IntroText>
+          Latest articles written by me, for no reason. Page {currentPage} of
+          {pages}
+        </IntroText>
+      </Intro>
 
       <div className="h-14" />
 

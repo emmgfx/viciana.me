@@ -1,11 +1,13 @@
-import { Intro } from "@/components/Intro";
+import { Intro, IntroTitle } from "@/components/Intro";
 import { SocialLinks } from "@/components/SocialLinks";
 import Image from "next/image";
 
-export default async function AboutMe({ params }) {
+export default async function AboutMe() {
   return (
     <>
-      <Intro title="About me" />
+      <Intro>
+        <IntroTitle>About me</IntroTitle>
+      </Intro>
       <div className="grid md:grid-cols-[7fr_3fr] gap-8">
         <div className="order-2 md:order-1">
           <Description />

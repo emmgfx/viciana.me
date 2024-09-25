@@ -1,5 +1,5 @@
 import { ArticlesList } from "@/components/ArticlesList";
-import { Intro } from "@/components/Intro";
+import { Intro, IntroText, IntroTitle } from "@/components/Intro";
 import { Pager } from "@/components/Pager";
 
 import { getAllPosts, getPostsCount } from "@/shared/api";
@@ -13,10 +13,10 @@ export default async function Articles({ params }) {
 
   return (
     <>
-      <Intro
-        title="Articles"
-        text="Latest articles written by me, for no reason"
-      />
+      <Intro>
+        <IntroTitle>Articles</IntroTitle>
+        <IntroText>Latest articles written by me, for no reason</IntroText>
+      </Intro>
 
       <div className="h-14" />
 

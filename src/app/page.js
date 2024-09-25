@@ -1,6 +1,6 @@
 import { ArticlesList } from "@/components/ArticlesList";
 import { Card } from "@/components/Card";
-import { Intro } from "@/components/Intro";
+import { Intro, IntroBottom, IntroText, IntroTitle } from "@/components/Intro";
 import { Photos } from "@/components/Photos";
 import { PostItemSmall } from "@/components/PostItemSmall";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -12,15 +12,18 @@ export default async function Home() {
 
   return (
     <>
-      <Intro
-        title="Software developer, frontend ninja and gamer."
-        text="I'm Josep Viciana (aka emmgfx), a software developer based in
-        Barcelona. I have collaborated on projects for both tiny and
-        internationally renowned companies and organizations. I'm the
-        co-founder of Marmota and most important: I've unlocked all the
-        Sekiro achievements, twice."
-      >
-        <SocialLinks />
+      <Intro>
+        <IntroTitle>Software developer, frontend ninja and gamer.</IntroTitle>
+        <IntroText>
+          I&apos;m Josep Viciana (aka emmgfx), a software developer based in
+          Barcelona. I have collaborated on projects for both tiny and
+          internationally renowned companies and organizations. I'm the
+          co-founder of Marmota and most important: I've unlocked all the Sekiro
+          achievements, twice.
+        </IntroText>
+        <IntroBottom>
+          <SocialLinks />
+        </IntroBottom>
       </Intro>
       <div className="h-14" />
       <Photos />
@@ -94,8 +97,10 @@ export default async function Home() {
             <div className="h-4" />
             <p className="text-xs text-slate-400 leading-relaxed">
               If you want to contact with me, search for me by the nickname{" "}
-              <span className="bg-slate-700 rounded py-1 px-1.5">emmgfx</span>{" "}
-              in Gmail o Telegram.
+              <span className="underline decoration-pink-500 decoration-dotted underline-offset-4">
+                emmgfx
+              </span>{" "}
+              in Gmail, Telegram, LinkedIn, GitHub, etc.
             </p>
           </Card>
         </div>
