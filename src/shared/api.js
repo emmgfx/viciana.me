@@ -8,8 +8,9 @@ const postsDirectory = join(process.cwd(), "content/posts");
 
 export function getPostSlugs() {
   return fs
-    .readdirSync(postsDirectory)
-    .map((file) => file.replace(/\.md$/, ""))
+    .readdirSync(postsDirectory, { withFileTypes: true })
+    .filter((dirent) => dirent.isFile()) // Avoid folders
+    .map((dirent) => dirent.name.replace(/\.md$/, "")) // Remove file extension
     .sort((a, b) => {
       const aDate = new Date(a.slice(0, 10));
       const bDate = new Date(b.slice(0, 10));
