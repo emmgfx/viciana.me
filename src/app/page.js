@@ -6,6 +6,7 @@ import { PostItemSmall } from "@/components/PostItemSmall";
 import { SocialLinks } from "@/components/SocialLinks";
 import { WorkItem } from "@/components/WorkItem";
 import { getAllPosts } from "@/shared/api";
+import Link from "next/link";
 
 export default async function Home() {
   const posts = getAllPosts(0, 2);
@@ -91,6 +92,12 @@ export default async function Home() {
                 />
               </li>
             </ul>
+            {/* <Link
+              href="/about-me"
+              className="block text-center p-4 -mx-4 -mb-4 mt-2 text-slate-400 text-xs rounded hover:bg-slate-800 hover:text-slate-300 transition"
+            >
+              More about my work
+            </Link> */}
           </Card>
           <Card>
             <h2 className="text-sm font-semibold">Contact</h2>
@@ -102,6 +109,12 @@ export default async function Home() {
               </span>{" "}
               in Gmail, Telegram, LinkedIn, GitHub, etc.
             </p>
+            <Link
+              href="/about-me"
+              className="block text-center p-4 -mx-4 -mb-4 mt-2 text-slate-400 text-xs rounded hover:bg-slate-800 hover:text-slate-300 transition"
+            >
+              More about me
+            </Link>
           </Card>
         </div>
       </div>

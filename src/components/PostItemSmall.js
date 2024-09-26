@@ -5,8 +5,6 @@ import { ReadMore } from "./ReadMore";
 export const PostItemSmall = async ({ post }) => {
   const { data: metadata, slug } = post;
 
-  console.log(metadata);
-
   return (
     <article className="relative">
       <Link

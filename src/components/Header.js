@@ -5,7 +5,7 @@ import { MobileNavigation } from "@/components/MobileNavigation";
 
 export const Header = () => {
   return (
-    <header className="py-4 md:py-8 border-b border-b-slate-800 mb-10">
+    <header className="py-4 md:py-8 border-b border-b-slate-800 mb-6 md:mb-8">
       <div className="flex items-center justify-between max-w-5xl px-4 md:px-8 mx-auto">
         <Link
           href="/"
