@@ -33,8 +33,9 @@ const Description = () => {
       </p>
       <p>
         I have collaborated on projects for both tiny and internationally
-        renowned companies and organizations. I'm the co-founder of Marmota and
-        most important: I&apos;ve unlocked all the Sekiro achievements, twice.
+        renowned companies and organizations. I&apos;m the co-founder of Marmota
+        and most important: I&apos;ve unlocked all the Sekiro achievements,
+        twice.
       </p>
       <p>
         I spent my time mainly on my family and work, as everyone. In my limited
