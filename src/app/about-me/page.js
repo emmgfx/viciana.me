@@ -61,7 +61,7 @@ const Description = () => {
 
 const Sidebar = () => {
   return (
-    <div className="grid grid-cols-[30fr_60fr] items-center gap-8 md:flex md:flex-col md:items-start">
+    <div className="grid grid-cols-[40fr_60fr] sm:grid-cols-[20fr_80fr] items-center gap-4 sm:gap-8 md:flex md:flex-col md:items-start">
       <div className="shrink">
         <Image
           src="/avatar.jpeg"
