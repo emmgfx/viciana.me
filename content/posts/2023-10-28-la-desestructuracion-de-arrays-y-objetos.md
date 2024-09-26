@@ -9,6 +9,7 @@ tags:
   - ES6
 categories: []
 image: /post_images/artificial-photography-S_bbqW4yQZA-unsplash.jpg
+excerpt: Es algo muy sencillo y aunque al principio puede no parecer muy útil, provee una forma de escribir código que resulta más rápida y legible.
 ---
 
 Suena terrible. **Desestructuración**. Pero en realidad es algo muy sencillo y aunque al principio puede no parecer muy útil, provee una forma de escribir código que resulta más rápida y legible. Y si has leído algún otro artículo mío, sabrás que para mí la legibilidad no sólo es importante: es lo más importante.

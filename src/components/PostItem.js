@@ -20,12 +20,7 @@ export const PostItem = async ({ post }) => {
           />
         </div>
         <div className="h-4" />
-        <p className="text-sm text-slate-400 z-10">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-          molestie, elit et scelerisque laoreet, urna metus egestas nibh, nec
-          ullamcorper ante mi et tortor. Mauris at nisi suscipit, faucibus sem
-          mattis, placerat nunc.
-        </p>
+        <p className="text-sm text-slate-400 z-10">{metadata.excerpt}</p>
         <div className="h-4" />
         <ReadMore />
       </div>
