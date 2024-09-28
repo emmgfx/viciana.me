@@ -19,12 +19,10 @@ export const MobileNavigation = () => {
   const open = () => {
     setHide(false);
     mobileMenuRef.current.showModal();
-    // document.querySelector("body").style.overflow = "hidden";
   };
 
   const close = () => {
     if (!mobileMenuRef.current.open) return;
-    // document.querySelector("body").style.overflow = "auto";
     setHide(true);
     mobileMenuRef.current.addEventListener(
       "webkitAnimationEnd",
@@ -66,12 +64,6 @@ export const MobileNavigation = () => {
         ref={mobileMenuRef}
       >
         <div className="py-4 px-8 bg-slate-700 text-slate-200">
-          {/* <header className="flex items-center justify-between pt-4 pb-6">
-            <div className="text-xs text-slate-400">Navigation:</div>
-            <button onClick={close}>
-              <XIcon className="size-6" />
-            </button>
-          </header> */}
           <ul className="text-sm">
             <MobileNavigationLink
               name="Home"
