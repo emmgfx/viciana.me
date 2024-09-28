@@ -57,7 +57,7 @@ export const MobileNavigation = () => {
           if (e.target === e.currentTarget) close();
         }}
         className={twMerge(
-          "rounded-t-3xl bg-transparent w-full sm:w-1/2 shadow mb-0 mt-auto ml-auto mr-auto",
+          "rounded-[32px] bg-transparent w-full sm:w-1/2 shadow mb-4 mt-auto ml-4 mr-4",
           // Backdrop
           "backdrop:backdrop-blur-xl",
           !hide && "backdrop:animate-backdrop-show animate-show",
@@ -100,8 +100,7 @@ const MobileNavigationLink = ({ name, href, active }) => {
         href={href}
         className={twMerge(
           "flex items-center py-4 focus-visible:underline focus-visible:outline-none rounded-full -mx-4 px-5",
-          "active:bg-slate-800",
-          active && "bg-slate-600 transition duration"
+          active && "bg-slate-600"
         )}
       >
         {/* <ChevronRightIcon
