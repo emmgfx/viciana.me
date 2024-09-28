@@ -104,10 +104,8 @@ export default async function Home() {
             <div className="h-4" />
             <p className="text-xs text-slate-400 leading-relaxed">
               If you want to contact with me, search for me by the nickname{" "}
-              <span className="underline decoration-pink-500 decoration-dotted underline-offset-4">
-                emmgfx
-              </span>{" "}
-              in Gmail, Telegram, LinkedIn, GitHub, etc.
+              <span className="text-slate-200">emmgfx</span> in Gmail, Telegram,
+              LinkedIn, GitHub, etc.
             </p>
             <Link
               href="/about-me"
