@@ -19,12 +19,12 @@ export const MobileNavigation = () => {
   const open = () => {
     setHide(false);
     mobileMenuRef.current.showModal();
-    document.querySelector("body").style.overflow = "hidden";
+    // document.querySelector("body").style.overflow = "hidden";
   };
 
   const close = () => {
     if (!mobileMenuRef.current.open) return;
-    document.querySelector("body").style.overflow = "auto";
+    // document.querySelector("body").style.overflow = "auto";
     setHide(true);
     mobileMenuRef.current.addEventListener(
       "webkitAnimationEnd",
