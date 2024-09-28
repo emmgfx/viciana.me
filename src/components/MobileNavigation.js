@@ -6,7 +6,7 @@ import { usePrevious } from "@uidotdev/usehooks";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 
-import { ChevronRightIcon, MenuIcon, XIcon } from "lucide-react";
+import { MenuIcon, XIcon } from "lucide-react";
 
 import { NAVIGATION } from "@/shared/constants";
 
@@ -57,7 +57,7 @@ export const MobileNavigation = () => {
           if (e.target === e.currentTarget) close();
         }}
         className={twMerge(
-          "rounded-[32px] bg-transparent w-full sm:w-1/2 shadow mb-4 mt-auto ml-4 mr-4",
+          "rounded-[32px] bg-transparent w-full sm:max-w-sm shadow mb-4 mt-auto mx-auto transition-all",
           // Backdrop
           "backdrop:backdrop-blur-xl",
           !hide && "backdrop:animate-backdrop-show animate-show",
@@ -66,7 +66,7 @@ export const MobileNavigation = () => {
         ref={mobileMenuRef}
       >
         <div className="py-4 px-8 bg-slate-700 text-slate-200">
-          <header className="flex items-center justify-between py-4">
+          <header className="flex items-center justify-between pt-4 pb-6">
             <div className="text-xs text-slate-400">Navigation:</div>
             <button onClick={close}>
               <XIcon className="size-6" />
@@ -100,15 +100,9 @@ const MobileNavigationLink = ({ name, href, active }) => {
         href={href}
         className={twMerge(
           "flex items-center py-4 focus-visible:underline focus-visible:outline-none rounded-full -mx-4 px-5",
-          active && "bg-slate-600"
+          active && "bg-slate-600 transition"
         )}
       >
-        {/* <ChevronRightIcon
-          className={twMerge(
-            "block size-4 mr-2 transition-all duration-300",
-            !active && "-ml-6 opacity-0"
-          )}
-        /> */}
         {name}
       </Link>
     </li>
