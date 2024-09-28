@@ -9,29 +9,29 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        show: "show 200ms ease-out normal",
-        hide: "hide 200ms ease-out normal",
+        show: "show 300ms ease-in-out normal",
+        hide: "hide 300ms ease-in-out normal",
         "backdrop-show": "backdrop-show 200ms ease-out normal",
         "backdrop-hide": "backdrop-hide 200ms ease-out normal",
       },
       keyframes: {
         show: {
           from: {
-            transform: "scale(95%) translateY(-3%)",
+            transform: "translateY(50%)",
             opacity: 0,
           },
           to: {
-            transform: "scale(100%) translateY(0%)",
+            transform: "translateY(0%)",
             opacity: 1,
           },
         },
         hide: {
           from: {
-            transform: "scale(100%) translateY(0%)",
+            transform: "translateY(0%)",
             opacity: 1,
           },
           to: {
-            transform: "scale(95%) translateY(-3%)",
+            transform: "translateY(50%)",
             opacity: 0,
           },
         },

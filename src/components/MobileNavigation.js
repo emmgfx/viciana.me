@@ -38,7 +38,8 @@ export const MobileNavigation = () => {
 
   useEffect(() => {
     if (previousPathname === null) return;
-    close();
+    setTimeout(close, 500);
+    // close();
   }, [pathname, previousPathname]);
 
   return (
@@ -56,7 +57,7 @@ export const MobileNavigation = () => {
           if (e.target === e.currentTarget) close();
         }}
         className={twMerge(
-          "rounded-lg bg-transparent w-full sm:w-1/2 shadow",
+          "rounded-t-lg bg-transparent w-full sm:w-1/2 shadow mb-0 mt-auto ml-auto mr-auto",
           // Backdrop
           "backdrop:backdrop-blur-xl",
           !hide && "backdrop:animate-backdrop-show animate-show",
@@ -66,9 +67,7 @@ export const MobileNavigation = () => {
       >
         <div className="py-4 px-8 bg-slate-700 text-slate-200">
           <header className="flex items-center justify-between py-4">
-            <div className="text-xs text-slate-400">
-              Navigation: {hide && "hide"}
-            </div>
+            <div className="text-xs text-slate-400">Navigation:</div>
             <button onClick={close}>
               <XIcon className="size-6" />
             </button>
@@ -99,9 +98,14 @@ const MobileNavigationLink = ({ name, href, active }) => {
     <li>
       <Link
         href={href}
-        className="flex items-center py-4 hover:bg-slate-600 -mx-4 px-4 rounded-md hover:outline outline-slate-600 focus-visible:outline focus-visible:bg-slate-600"
+        className="flex items-center py-4 focus-visible:underline focus-visible:outline-none"
       >
-        {active && <ChevronRightIcon className="block size-4 mr-2" />}
+        <ChevronRightIcon
+          className={twMerge(
+            "block size-4 mr-2 transition-all duration-300",
+            !active && "-ml-6 opacity-0"
+          )}
+        />
         {name}
       </Link>
     </li>

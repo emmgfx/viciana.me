@@ -67,17 +67,17 @@ export default async function Uses() {
   );
 }
 
-const Thing = ({ name, subtitle, href, children }) => {
+const Thing = ({ name = "", subtitle, href, children }) => {
   return (
-    <article className="relative py-4 px-5 rounded-md border border-slate-800 has-[a]:hover:bg-slate-800">
+    <article className="group relative py-4 px-5 rounded-md border border-slate-800 has-[a]:hover:bg-slate-800 transition ">
       <h3 className="text-slate-300">
         {href ? (
           <a href={href} target="_blank">
-            {name || ""}
-            <span className="absolute inset-0"></span>
+            {name}
+            <span className="absolute inset-0" />
           </a>
         ) : (
-          name || ""
+          name
         )}
       </h3>
       <span className="text-xs text-slate-500">{subtitle}</span>
