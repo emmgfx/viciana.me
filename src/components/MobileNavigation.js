@@ -99,8 +99,9 @@ const MobileNavigationLink = ({ name, href, active }) => {
       <Link
         href={href}
         className={twMerge(
-          "flex items-center py-4 focus-visible:underline focus-visible:outline-none",
-          active && "bg-slate-600 rounded-full -mx-6 px-6 transition duration"
+          "flex items-center py-4 focus-visible:underline focus-visible:outline-none rounded-full -mx-4 px-5",
+          "active:bg-slate-800",
+          active && "bg-slate-600 transition duration"
         )}
       >
         {/* <ChevronRightIcon
