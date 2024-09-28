@@ -27,15 +27,14 @@ const Description = () => {
   return (
     <div className="space-y-8 text-slate-400">
       <p>
-        I&apos;m Josep Viciana, frontend developer. Previously, and in side
-        projects, I&apos;ve done stuff for backend and Android. Based in
-        Barcelona, working remotely.
+        I&apos;m Josep Viciana, a frontend developer based in the outskirts of
+        Barcelona and working remotely.
       </p>
       <p>
         I have collaborated on projects for both tiny and internationally
         renowned companies and organizations. I&apos;m the co-founder of Marmota
         and most important: I&apos;ve unlocked all the Sekiro achievements,
-        twice.
+        twice 😏.
       </p>
       <p>
         I spent my time mainly on my family and work, as everyone. In my limited
