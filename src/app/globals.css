@@ -36,3 +36,9 @@
   @apply block size-4;
   fill: currentColor
 }
+
+@media (pointer: coarse) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
