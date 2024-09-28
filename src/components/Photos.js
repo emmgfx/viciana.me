@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Photos = () => {
   return (
-    <div className="flex flex-nowrap gap-4 overflow-scroll -mx-8 px-8 md:grid md:grid-cols-4 md:overflow-visible xl:-mx-24 snap-x snap-mandatory scroll-p-8">
+    <div className="flex flex-nowrap gap-4 overflow-scroll -mx-4 px-4 md:grid md:grid-cols-4 md:overflow-visible xl:-mx-24 snap-x snap-mandatory scroll-p-8">
       <Image
         src="/photos/75029068_2541358066133164_155330168215164162_n.jpg"
         width={400}
