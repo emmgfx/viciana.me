@@ -9,30 +9,26 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        show: "show 300ms ease-in-out normal",
-        hide: "hide 300ms ease-in-out normal",
+        show: "show 700ms cubic-bezier(.1,1,.1,1) normal",
+        hide: "hide 700ms cubic-bezier(.1,1,.1,1) normal",
         "backdrop-show": "backdrop-show 200ms ease-out normal",
         "backdrop-hide": "backdrop-hide 200ms ease-out normal",
       },
       keyframes: {
         show: {
           from: {
-            transform: "translateY(50%)",
-            opacity: 0,
+            transform: "translateY(110%)",
           },
           to: {
             transform: "translateY(0%)",
-            opacity: 1,
           },
         },
         hide: {
           from: {
             transform: "translateY(0%)",
-            opacity: 1,
           },
           to: {
-            transform: "translateY(50%)",
-            opacity: 0,
+            transform: "translateY(110%)",
           },
         },
         "backdrop-show": {
