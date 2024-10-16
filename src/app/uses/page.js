@@ -58,9 +58,9 @@ export default async function Uses() {
           href="https://amzn.to/47RxSa0"
         ></Thing>
         <Thing
-          name="Meta Quest 2"
-          href="https://amzn.to/4ejmjuE"
-          subtitle="256GB + Case"
+          name="Meta Quest 3"
+          href="https://amzn.to/4dRdabE"
+          subtitle="128GB"
         ></Thing>
       </div>
     </>
