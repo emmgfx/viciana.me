@@ -1,9 +1,5 @@
 export const Intro = ({ children }) => {
-  return (
-    <div className="max-w-3xl" style={{ textWrap: "balance" }}>
-      {children}
-    </div>
-  );
+  return <div className="max-w-3xl text-balance">{children}</div>;
 };
 
 export const IntroTitle = ({ children }) => {

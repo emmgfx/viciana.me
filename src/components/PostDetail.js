@@ -10,10 +10,7 @@ export const PostDetail = async ({ post }) => {
 
   return (
     <article>
-      <h1
-        className="text-4xl font-bold tracking-tight sm:text-5xl"
-        style={{ textWrap: "balance" }}
-      >
+      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-balance">
         {metadata.title}
       </h1>
       <div className="h-4" />
