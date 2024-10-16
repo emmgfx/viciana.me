@@ -61,16 +61,14 @@ const Description = () => {
 
 const Sidebar = () => {
   return (
-    <div className="grid grid-cols-[40fr_60fr] sm:grid-cols-[20fr_80fr] items-center gap-4 sm:gap-8 md:flex md:flex-col md:items-start">
-      <div className="shrink">
-        <Image
-          src="/avatar.jpeg"
-          alt="Josep Viciana"
-          width="460"
-          height="460"
-          className="rounded-2xl rotate-2 w-full max-w-xs mx-auto"
-        />
-      </div>
+    <div className="grid grid-cols-[40fr_60fr] sm:grid-cols-[30fr_70fr] items-center gap-4 sm:gap-8 md:flex md:flex-col md:items-start">
+      <Image
+        src="/avatar.jpeg"
+        alt="Josep Viciana"
+        width="460"
+        height="460"
+        className="rounded-2xl rotate-2 w-full max-w-xs mx-auto aspect-square bg-white"
+      />
       <SocialLinks className="flex-col shrink-0" withTitles />
     </div>
   );
