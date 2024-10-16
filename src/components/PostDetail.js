@@ -10,8 +10,6 @@ export const PostDetail = async ({ post }) => {
 
   return (
     <article>
-      {/* <div className="h-6" /> */}
-
       <h1
         className="text-4xl font-bold tracking-tight sm:text-5xl"
         style={{ textWrap: "balance" }}
@@ -77,7 +75,6 @@ export const PostDetail = async ({ post }) => {
         ].join(" ")}
         dangerouslySetInnerHTML={{ __html: html }}
       />
-      {/* <div>{JSON.stringify(metadata)}</div> */}
     </article>
   );
 };
