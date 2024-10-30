@@ -12,7 +12,8 @@ export async function generateStaticParams() {
   return pagesArray.map((page) => ({ page: String(page) })); // [{page: '1'}, ...]
 }
 
-export default async function Articles({ params }) {
+export default async function Articles(props) {
+  const params = await props.params;
   const { page: currentPage = 1 } = params;
   const posts = getAllPosts((currentPage - 1) * POSTS_PER_PAGE);
   const postsCount = getPostsCount();

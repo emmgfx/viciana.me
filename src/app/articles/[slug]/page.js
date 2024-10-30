@@ -11,7 +11,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Article({ params }) {
+export default async function Article(props) {
+  const params = await props.params;
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
   return <PostDetail post={post} />;

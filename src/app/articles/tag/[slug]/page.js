@@ -10,7 +10,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Tag({ params }) {
+export default async function Tag(props) {
+  const params = await props.params;
   const posts = getAllPosts(0, 999).filter((post) =>
     post.data.tags.some((tag) => tag.slug === params.slug)
   );

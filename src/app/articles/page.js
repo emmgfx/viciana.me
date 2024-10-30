@@ -5,7 +5,8 @@ import { Pager } from "@/components/Pager";
 import { getAllPosts, getPostsCount } from "@/shared/api";
 import { POSTS_PER_PAGE } from "@/shared/constants";
 
-export default async function Articles({ params }) {
+export default async function Articles(props) {
+  const params = await props.params;
   const postsCount = getPostsCount();
   const posts = getAllPosts();
 
