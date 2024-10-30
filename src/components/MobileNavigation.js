@@ -2,9 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { usePrevious } from "@uidotdev/usehooks";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
+
+import { usePrevious } from "@/hooks/usePrevious";
 
 import { MenuIcon, XIcon } from "lucide-react";
 
