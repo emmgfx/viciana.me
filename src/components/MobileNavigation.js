@@ -7,7 +7,7 @@ import Link from "next/link";
 
 import { usePrevious } from "@/hooks/usePrevious";
 
-import { MenuIcon, XIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 
 import { NAVIGATION } from "@/shared/constants";
 
