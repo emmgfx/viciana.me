@@ -1,10 +1,37 @@
+import Image from "next/image";
+import Script from "next/script";
+
 import { Intro, IntroTitle, IntroText } from "@/components/Intro";
 import { SocialLinks } from "@/components/SocialLinks";
-import Image from "next/image";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  dateCreated: "2024-12-07T21:43:00-01:00",
+  dateModified: "2024-12-07T14:53:00-01:00",
+  mainEntity: {
+    "@type": "Person",
+    name: "Josep Viciana",
+    alternateName: "emmgfx",
+    description: "Software developer",
+    image: "https://www.viciana.me/avatar.jpeg",
+    sameAs: [
+      "https://www.linkedin.com/in/josep-viciana/",
+      "https://github.com/emmgfx",
+    ],
+  },
+};
 
 export default async function AboutMe() {
   return (
     <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
       <Intro>
         <IntroTitle>About me</IntroTitle>
         <IntroText>
