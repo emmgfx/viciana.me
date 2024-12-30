@@ -5,7 +5,7 @@ export const SocialLinks = ({ className, withTitles = false }) => {
     <ul className={twMerge("flex gap-4 text-slate-400", className)}>
       <li>
         <a
-          href="https://www.x.com/emmgfx"
+          href="https://x.com/josep_viciana"
           target="_blank"
           className="hover:text-slate-100 flex gap-3 items-center"
         >
@@ -42,7 +42,7 @@ export const SocialLinks = ({ className, withTitles = false }) => {
       </li>
       <li>
         <a
-          href="https://www.linkedin.com/in/emmgfx/"
+          href="https://www.linkedin.com/in/josep-viciana"
           target="_blank"
           className="hover:text-slate-100 flex gap-3 items-center"
         >
