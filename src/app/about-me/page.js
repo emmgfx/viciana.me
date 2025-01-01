@@ -72,16 +72,6 @@ const Description = () => {
         </span>{" "}
         PS5.
       </p>
-      <p>I need some more lines to fill the designed area, so, here we go:</p>
-      <p>
-        Pellentesque tristique, orci tincidunt porttitor consectetur, magna
-        lacus elementum orci, id euismod ex nibh at orci. Fusce consectetur
-        pulvinar convallis. Duis sodales et nunc eu dignissim. Vivamus in libero
-        laoreet, rhoncus felis quis, vestibulum neque. Fusce nec ornare magna.
-        Quisque nec metus elit. In eget commodo diam. Donec ex neque, efficitur
-        euismod porttitor a, scelerisque quis ante. Integer luctus neque ante,
-        quis finibus leo tincidunt a.
-      </p>
     </div>
   );
 };
