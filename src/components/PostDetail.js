@@ -69,6 +69,7 @@ export const PostDetail = async ({ post }) => {
           "[&_mark[data-highlighted-chars]]:px-1.5",
           "[&_mark[data-highlighted-chars]]:py-0.5",
           "[&_mark[data-highlighted-chars]]:rounded-full",
+          "[&_img]:rounded-xl",
         ].join(" ")}
         dangerouslySetInnerHTML={{ __html: html }}
       />
