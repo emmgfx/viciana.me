@@ -3,7 +3,7 @@ title: The technology behind Stadiaffinity
 description: A look into the guts of a project cancelled by a third party
 date: 2024-08-11T16:36:15.234Z
 image: /post_images/stadiaffinity.png
-draft: true
+draft: false
 tags:
   - Stadiaffinity
   - Stadia

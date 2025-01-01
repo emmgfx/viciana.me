@@ -75,6 +75,7 @@ export function getAllPosts(offset = 0, limit = POSTS_PER_PAGE) {
   const posts = slugs
     .slice(offset, offset + limit)
     .map((slug) => getPostBySlug(slug))
+    .filter((post) => !post.data.draft)
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
