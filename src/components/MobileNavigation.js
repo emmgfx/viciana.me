@@ -36,7 +36,8 @@ export const MobileNavigation = () => {
   };
 
   useEffect(() => {
-    if (previousPathname === null) return;
+    if (!previousPathname) return;
+    if (previousPathname === pathname) return;
     setTimeout(close, 500);
     // close();
   }, [pathname, previousPathname]);
