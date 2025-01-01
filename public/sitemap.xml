@@ -9,83 +9,78 @@
 
 <url>
   <loc>https://www.viciana.me/</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.viciana.me/articles</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.viciana.me/uses</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.viciana.me/about-me</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.viciana.me/articles/2024-12-30-propositos-y-pronosticos-para-2025</loc>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.viciana.me/articles/2024-08-11-the-technology-behind-stadiaffinity</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.viciana.me/articles/2023-12-03-unidades-css-em-y-rem-cuales-son-sus-diferencias</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.viciana.me/articles/tag/2025</loc>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.viciana.me/articles/2023-10-28-la-desestructuracion-de-arrays-y-objetos</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
+  <loc>https://www.viciana.me/articles/tag/propositos</loc>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.viciana.me/articles/tag/pronosticos</loc>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.viciana.me/articles/tag/xr</loc>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.viciana.me/articles/tag/espanol</loc>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.viciana.me/articles/tag/stadiaffinity</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.viciana.me/articles/tag/stadia</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.viciana.me/articles/tag/technology</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.viciana.me/articles/tag/english</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
+  <lastmod>2025-01-01T21:45:58+00:00</lastmod>
   <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.viciana.me/articles/tag/css</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.viciana.me/articles/tag/em</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.viciana.me/articles/tag/rem</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.viciana.me/articles/tag/echo</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://www.viciana.me/articles/tag/es6</loc>
-  <lastmod>2024-12-07T20:50:21+00:00</lastmod>
-  <priority>0.51</priority>
 </url>
 
 
