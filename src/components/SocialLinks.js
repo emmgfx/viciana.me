@@ -10,7 +10,7 @@ import {
 
 export const SocialLinks = ({ className, withTitles = false }) => {
   return (
-    <ul className={twMerge("flex gap-4 text-slate-400", className)}>
+    <ul className={twMerge("text-sm flex gap-4 text-slate-400", className)}>
       <li>
         <a
           href="https://x.com/josep_viciana"
@@ -48,16 +48,6 @@ export const SocialLinks = ({ className, withTitles = false }) => {
         >
           <TelegramLogo className="size-7" />
           {withTitles && "Talk on Telegram"}
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://horizon.meta.com/profile/112215254850306/"
-          target="_blank"
-          className="hover:text-slate-100 flex gap-3 items-center"
-        >
-          <MetaLogo className="size-7" />
-          {withTitles && "Meta Horizon"}
         </a>
       </li>
     </ul>
