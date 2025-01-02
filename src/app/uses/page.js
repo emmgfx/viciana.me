@@ -51,7 +51,7 @@ export default async function Uses() {
         <GamepadIcon /> Gaming
       </h2>
       <div className="h-8" />
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Thing
           name="Sony Playstation 5"
           subtitle="With disk drive, always"
