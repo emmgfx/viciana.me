@@ -57,7 +57,7 @@ export const SocialLinks = ({ className, withTitles = false }) => {
           className="hover:text-slate-100 flex gap-3 items-center"
         >
           <MetaLogo className="size-7" />
-          {withTitles && "Talk on Telegram"}
+          {withTitles && "Meta Horizon"}
         </a>
       </li>
     </ul>
