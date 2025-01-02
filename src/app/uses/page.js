@@ -1,6 +1,10 @@
 import { Intro, IntroTitle, IntroText } from "@/components/Intro";
 import { GamepadIcon, LaptopMinimalIcon } from "lucide-react";
 
+export const metadata = {
+  title: "Uses",
+};
+
 export default async function Uses() {
   return (
     <>

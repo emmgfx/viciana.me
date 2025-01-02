@@ -5,6 +5,10 @@ import Script from "next/script";
 import { Intro, IntroTitle, IntroText } from "@/components/Intro";
 import { SocialLinks } from "@/components/SocialLinks";
 
+export const metadata = {
+  title: "About me",
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
