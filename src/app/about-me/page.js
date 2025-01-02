@@ -34,9 +34,9 @@ export default async function AboutMe() {
       />
       <Intro>
         <IntroTitle>About me</IntroTitle>
-        <IntroText>
+        {/* <IntroText>
           <em>&laquo;Un poco más de esto nuestro&raquo;</em>
-        </IntroText>
+        </IntroText> */}
       </Intro>
       <div className="grid md:grid-cols-[7fr_3fr] gap-12">
         <div className="order-2 md:order-1">
