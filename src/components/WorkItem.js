@@ -28,7 +28,7 @@ export const WorkItem = ({
               return (
                 <li key={index} className="text-xs text-slate-400 flex">
                   <div className="grow">{responsability}</div>
-                  <div className="text-xs text-slate-500">
+                  <div>
                     {startYear} — {endYear || "Present"}
                   </div>
                 </li>
