@@ -23,6 +23,7 @@ export const Navigation = ({ className }) => {
             ])}
           >
             <HouseIcon className="size-5" />
+            <span className="sr-only">Home</span>
           </Link>
         </li>
         {NAVIGATION.map(({ name, href }) => (
