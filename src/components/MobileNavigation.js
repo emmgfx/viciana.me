@@ -44,15 +44,13 @@ export const MobileNavigation = () => {
 
   return (
     <>
-      <div className="border border-slate-700 rounded-full text-sm text-slate-400 bg-slate-900 truncate md:hidden">
-        <button
-          onClick={open}
-          className="block px-2 py-2 hover:text-slate-100 transition m-px rounded-full"
-          aria-label="Open navigation menu"
-        >
-          <MenuIcon className="size-5" />
-        </button>
-      </div>
+      <button
+        onClick={open}
+        className="block md:hidden p-2 border border-slate-700 hover:bg-slate-700 text-slate-400 bg-slate-900 hover:text-slate-100 m-px rounded-full focus-visible:outline outline-2 outline-slate-400 -outline-offset-1 focus-visible:text-slate-100 focus-visible:bg-slate-800"
+        aria-label="Open navigation menu"
+      >
+        <MenuIcon className="size-5" />
+      </button>
       <dialog
         onClick={(e) => {
           if (e.target === e.currentTarget) close();
@@ -94,7 +92,7 @@ const MobileNavigationLink = ({ name, href, active }) => {
       <Link
         href={href}
         className={twMerge(
-          "flex items-center py-4 focus-visible:underline focus-visible:outline-none rounded-full -mx-4 px-5",
+          "flex items-center py-4 focus-visible:outline outline-2 outline-slate-300 -outline-offset-2 rounded-full -mx-4 px-5",
           active && "bg-slate-600 transition"
         )}
       >
