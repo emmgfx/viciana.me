@@ -16,10 +16,12 @@ export const MobileNavigation = () => {
   const pathname = usePathname();
   const previousPathname = usePrevious(pathname);
   const [hide, setHide] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   const open = () => {
     setHide(false);
     mobileMenuRef.current.showModal();
+    setExpanded(true);
   };
 
   const close = () => {
@@ -30,6 +32,7 @@ export const MobileNavigation = () => {
       () => {
         setHide(false);
         mobileMenuRef.current.close();
+        setExpanded(false);
       },
       { once: true }
     );
@@ -48,6 +51,7 @@ export const MobileNavigation = () => {
         onClick={open}
         className="block md:hidden p-2 border border-slate-700 hover:bg-slate-700 text-slate-400 bg-slate-900 hover:text-slate-100 m-px rounded-full focus-visible:outline outline-2 outline-slate-400 -outline-offset-1 focus-visible:text-slate-100 focus-visible:bg-slate-800"
         aria-label="Open navigation menu"
+        aria-expanded={expanded ? "true" : "false"}
       >
         <MenuIcon className="size-5" />
       </button>
