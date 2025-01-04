@@ -48,6 +48,7 @@ export const MobileNavigation = () => {
         <button
           onClick={open}
           className="block px-2 py-2 hover:text-slate-100 transition m-px rounded-full"
+          aria-label="Open navigation menu"
         >
           <MenuIcon className="size-5" />
         </button>

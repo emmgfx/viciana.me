@@ -8,48 +8,45 @@ import {
   XLogo,
 } from "@phosphor-icons/react/dist/ssr";
 
+const LINKS = [
+  {
+    title: "Profile on LinkedIn",
+    href: "https://www.linkedin.com/in/josep-viciana",
+    Icon: LinkedinLogo,
+  },
+  {
+    title: "Profile on X",
+    href: "https://x.com/josep_viciana",
+    Icon: XLogo,
+  },
+  {
+    title: "Talk on Telegram",
+    href: "https://t.me/emmgfx",
+    Icon: TelegramLogo,
+  },
+  {
+    title: "Profile on GitHub",
+    href: "https://www.github.com/emmgfx",
+    Icon: GithubLogo,
+  },
+];
+
 export const SocialLinks = ({ className, withTitles = false }) => {
   return (
     <ul className={twMerge("text-sm flex gap-4 text-slate-400", className)}>
-      <li>
-        <a
-          href="https://x.com/josep_viciana"
-          target="_blank"
-          className="hover:text-slate-100 flex gap-3 items-center"
-        >
-          <XLogo className="size-7" />
-          {withTitles && "Profile on X"}
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.github.com/emmgfx"
-          className="hover:text-slate-100 flex gap-3 items-center"
-        >
-          <GithubLogo className="size-7" />
-          {withTitles && "Profile on GitHub"}
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.linkedin.com/in/josep-viciana"
-          target="_blank"
-          className="hover:text-slate-100 flex gap-3 items-center"
-        >
-          <LinkedinLogo className="size-7" />
-          {withTitles && "Profile on LinkedIn"}
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://t.me/emmgfx"
-          target="_blank"
-          className="hover:text-slate-100 flex gap-3 items-center"
-        >
-          <TelegramLogo className="size-7" />
-          {withTitles && "Talk on Telegram"}
-        </a>
-      </li>
+      {LINKS.map(({ title, href, Icon }) => (
+        <li key={href}>
+          <a
+            href={href}
+            target="_blank"
+            className="hover:text-slate-100 flex gap-3 items-center"
+          >
+            <Icon className="size-7" />
+
+            {withTitles ? title : <span className="sr-only">{title}</span>}
+          </a>
+        </li>
+      ))}
     </ul>
   );
 };
