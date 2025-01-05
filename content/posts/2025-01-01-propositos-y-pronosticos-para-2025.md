@@ -9,7 +9,6 @@ tags:
   - propósitos
   - pronósticos
   - XR
-  - Español
 categories:
   - Personal
   - Español

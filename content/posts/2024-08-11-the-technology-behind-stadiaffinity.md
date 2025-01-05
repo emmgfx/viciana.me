@@ -8,8 +8,8 @@ tags:
   - Stadiaffinity
   - Stadia
   - Technology
+categories:
   - English
-categories: []
 type: default
 excerpt: I would like that this post to serve as an ending to the project wich I worked on for a while. Even while the end of the Stadia (and Stadiaffinity, as a consecuence), made me feel truly sad I need to say that both projects were a good thing for me.
 ---
