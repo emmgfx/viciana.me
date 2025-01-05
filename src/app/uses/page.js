@@ -66,6 +66,11 @@ export default async function Uses() {
           href="https://amzn.to/4dRdabE"
           subtitle="128GB"
         ></Thing>
+        <Thing
+          name="BoboVR M3 Max"
+          href="https://amzn.to/3DUPNBq"
+          subtitle="Swappable 10000 mAh battery"
+        ></Thing>
       </div>
     </>
   );
