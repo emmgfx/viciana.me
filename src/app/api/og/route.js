@@ -37,7 +37,9 @@ export async function GET(request) {
           <div tw="grow" />
           <div tw="text-[32px] flex">
             {tags.map((tag) => (
-              <div tw="mr-8">{tag}</div>
+              <div tw="mr-8" key={tag}>
+                {tag}
+              </div>
             ))}
           </div>
           <div tw="h-0.5 my-8 bg-slate-100" />
