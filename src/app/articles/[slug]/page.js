@@ -9,6 +9,29 @@ export async function generateMetadata({ params }, parent) {
 
   return {
     title: post.data.title,
+    openGraph: {
+      images: [
+        {
+          url: `/api/og?title=${post.data.title}&tags=${post.data.tags
+            .map((tag) => tag.name)
+            .join(",")}&width=1200&height=630`,
+          width: 1200,
+          height: 630,
+          alt: post.data.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      siteId: "1467726470533754880",
+      creator: "@josep_viciana",
+      images: {
+        url: `/api/og?title=${post.data.title}&tags=${post.data.tags
+          .map((tag) => tag.name)
+          .join(",")}&width=1600&height=900`,
+        alt: post.data.title,
+      },
+    },
   };
 }
 
