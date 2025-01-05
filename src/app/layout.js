@@ -2,6 +2,8 @@ import "./globals.css";
 import "./code.css";
 
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -29,6 +31,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="mx-auto w-full max-w-5xl grow px-4 md:px-8">
           {children}
+          <SpeedInsights />
         </main>
         <Footer />
       </body>
