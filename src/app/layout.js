@@ -16,6 +16,10 @@ export const metadata = {
     "Some of my thoughts, projects, photos. I usually write about technology.",
 };
 
+export const viewport = {
+  themeColor: "#0f172a",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="min-h-screen">
