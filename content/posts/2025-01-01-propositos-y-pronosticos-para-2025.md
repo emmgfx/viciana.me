@@ -29,7 +29,7 @@ Mis propósitos para este año no son superambiciosos, son más bien como una ho
 
 4. A-Frame es muy interesante, pero no espero quedarme ahí. Quiero **aprender más sobre XR**. En términos conceptuales y en términos de desarrollo. Los conceptuales llegarán solos porque es un tema que me interesa. En cuanto al desarrollo... me temo que es algo que me costará más ya que abandoné el desarrollo para Android hace años, y doy por hecho que para hacer algo serio [va a tener que ir por ahí](https://developer.android.com/xr?hl=es-419).
 
-5. Terminar todos los libros y juegos que tengo en cola. Puede parecer una tontería, pero no tengo mucho tiempo libre y no quiero destinarlo todo a cuestiones productivas, que es lo que son los puntos anteriores. Por lo pronto terminar la saga Blackwater ([gracias](https://www.lauraespana.com/)), jugar los Mafia 1 y 2 que los tengo pendientes desde que era adolescente, los God of War y alguno más que me estaré dejando.
+5. Terminar todos los libros y juegos que tengo en cola. Puede parecer una tontería, pero no tengo mucho tiempo libre y no quiero destinarlo todo a cuestiones productivas, que es lo que son los puntos anteriores. Por lo pronto terminar la saga Blackwater ([gracias](https://www.lauraespana.com/)), terminar el Batman de Quest, jugar los Mafia 1 y 2 que los tengo pendientes desde que era adolescente, los God of War y alguno más que me estaré dejando.
 
 ## Pronósticos:
 
@@ -62,3 +62,6 @@ Lo de Microsoft no voy a comentarlo, tampoco hay que ir a hacer daño.
 
 - Foto principal de [Thanh Tran](https://unsplash.com/es/@thanhpure) en [Unsplash](https://unsplash.com/es/fotos/un-fondo-blanco-con-el-numero-veinte-veinte-veinte-veinte-veinte-veinte-_OgrR91yktY).
 - Foto de apoyo de [James Yarema](https://unsplash.com/es/@jamesyarema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) en [Unsplash](https://unsplash.com/es/fotos/contenedor-redondo-azul-y-negro-E-CdfbrnnFs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
+> [!NOTE]
+> Edición post Reyes: Al backlog hay que agregar Ghost of Tsusima y Life is Strange: Double Exposure 🥳
