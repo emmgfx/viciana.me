@@ -13,11 +13,11 @@ export const WorkItem = ({
           width={32}
           height={32}
           alt={company}
-          className="h-8 w-8 rounded mt-0.5 overflow-hidden"
+          className="h-8 w-8 rounded-sm mt-0.5 overflow-hidden"
           quality={100}
         />
       ) : (
-        <div className="h-8 w-8 bg-slate-500 rounded mt-0.5" />
+        <div className="h-8 w-8 bg-slate-500 rounded-sm mt-0.5" />
       )}
       <div className="grow">
         <p className="text-xs font-semibold">{company}</p>

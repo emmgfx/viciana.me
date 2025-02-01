@@ -18,7 +18,7 @@ export const Navigation = ({ className }) => {
             className={twMerge([
               "block px-4 py-2 m-px transition rounded-full",
               "hover:text-slate-100",
-              "focus-visible:outline-none focus-visible:bg-slate-800 focus-visible:underline",
+              "focus-visible:outline-hidden focus-visible:bg-slate-800 focus-visible:underline",
               pathname === "/" && "text-slate-100 bg-slate-700",
             ])}
           >
@@ -33,7 +33,7 @@ export const Navigation = ({ className }) => {
               className={twMerge([
                 "block px-4 py-2 m-px transition rounded-full",
                 "hover:text-slate-100",
-                "focus-visible:outline-none focus-visible:bg-slate-800 focus-visible:underline",
+                "focus-visible:outline-hidden focus-visible:bg-slate-800 focus-visible:underline",
                 pathname.startsWith(href) && "text-slate-100 bg-slate-700",
               ])}
             >

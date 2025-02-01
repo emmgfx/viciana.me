@@ -60,7 +60,7 @@ export const MobileNavigation = () => {
           if (e.target === e.currentTarget) close();
         }}
         className={twMerge(
-          "rounded-[36px] bg-transparent w-full sm:max-w-sm shadow mb-4 mt-auto mx-auto transition-all",
+          "rounded-[36px] bg-transparent w-full sm:max-w-sm shadow-sm mb-4 mt-auto mx-auto transition-all",
           // Backdrop
           "backdrop:backdrop-blur-xl",
           !hide && "backdrop:animate-backdrop-show animate-show",

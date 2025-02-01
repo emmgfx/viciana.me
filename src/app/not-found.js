@@ -5,7 +5,7 @@ export default function NotFound() {
       <p>Could not find requested resource</p>
 
       <div className="">
-        <div className="w-full max-w-md aspect-[4/3] rounded-lg overflow-hidden">
+        <div className="w-full max-w-md aspect-4/3 rounded-lg overflow-hidden">
           <iframe
             src="https://giphy.com/embed/q8C0Ljmy4F6Ss"
             width="100%"

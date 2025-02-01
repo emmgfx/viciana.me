@@ -9,7 +9,7 @@ export const Header = () => {
       <div className="flex items-center justify-between max-w-5xl px-4 md:px-8 mx-auto">
         <Link
           href="/"
-          className="focus-visible:underline focus-visible:outline-none"
+          className="focus-visible:underline focus-visible:outline-hidden"
         >
           <h1 className="font-extrabold text-xl py-1.5">JOSEP VICIANA</h1>
         </Link>

@@ -9,7 +9,7 @@ export const Footer = () => {
         <address className="inline not-italic">
           <Link
             href="/"
-            className="focus-visible:underline focus-visible:outline-none hover:underline"
+            className="focus-visible:underline focus-visible:outline-hidden hover:underline"
           >
             Josep Viciana
           </Link>

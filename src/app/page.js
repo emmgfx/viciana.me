@@ -94,7 +94,7 @@ export default async function Home() {
             </ul>
             {/* <Link
               href="/about-me"
-              className="block text-center p-4 -mx-4 -mb-4 mt-2 text-slate-400 text-xs rounded hover:bg-slate-800 hover:text-slate-300 transition"
+              className="block text-center p-4 -mx-4 -mb-4 mt-2 text-slate-400 text-xs rounded-sm hover:bg-slate-800 hover:text-slate-300 transition"
             >
               More about my work
             </Link> */}
@@ -109,7 +109,7 @@ export default async function Home() {
             </p>
             <Link
               href="/about-me"
-              className="block text-center p-4 -mx-4 -mb-4 mt-2 text-slate-400 text-xs rounded hover:bg-slate-800 hover:text-slate-300 transition"
+              className="block text-center p-4 -mx-4 -mb-4 mt-2 text-slate-400 text-xs rounded-sm hover:bg-slate-800 hover:text-slate-300 transition"
             >
               More about me
             </Link>

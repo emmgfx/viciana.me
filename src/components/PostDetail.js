@@ -50,7 +50,7 @@ export const PostDetail = async ({ post }) => {
           "prose-code:after:content-['']",
           "prose-code:px-1",
           "prose-code:py-0.5",
-          "prose-code:rounded",
+          "prose-code:rounded-sm",
           "[&_div[data-rehype-pretty-code-fragment]]:my-8",
           "[&_div[data-rehype-pretty-code-fragment]_pre]:rounded-none",
           // Title
@@ -62,9 +62,9 @@ export const PostDetail = async ({ post }) => {
           "[&_div[data-rehype-pretty-code-title]]:py-2",
           // Highlighted lines
           "[&_span[data-highlighted-line]]:bg-slate-300/10",
-          "[&_span[data-highlighted-line]]:rounded",
+          "[&_span[data-highlighted-line]]:rounded-sm",
           // Highlighted chars
-          "[&_mark[data-highlighted-chars]_span]:!text-purple-100",
+          "[&_mark[data-highlighted-chars]_span]:text-purple-100!",
           "[&_mark[data-highlighted-chars]]:bg-purple-600",
           "[&_mark[data-highlighted-chars]]:px-1.5",
           "[&_mark[data-highlighted-chars]]:py-0.5",

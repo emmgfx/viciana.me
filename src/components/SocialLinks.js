@@ -39,10 +39,9 @@ export const SocialLinks = ({ className, withTitles = false }) => {
           <a
             href={href}
             target="_blank"
-            className="hover:text-slate-100 flex gap-3 items-center focus-visible:text-slate-100 focus-visible:bg-slate-700 focus-visible:outline outline-4 outline-slate-700 outline-offset-0 rounded"
+            className="hover:text-slate-100 flex gap-3 items-center focus-visible:text-slate-100 focus-visible:bg-slate-700 focus-visible:outline-4 outline-slate-700 outline-offset-0 rounded-sm"
           >
             <Icon className="size-7" />
-
             {withTitles ? title : <span className="sr-only">{title}</span>}
           </a>
         </li>
