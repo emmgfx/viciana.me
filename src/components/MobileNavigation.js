@@ -49,7 +49,7 @@ export const MobileNavigation = () => {
     <>
       <button
         onClick={open}
-        className="block md:hidden p-2 border border-slate-700 hover:bg-slate-700 text-slate-400 bg-slate-900 hover:text-slate-100 m-px rounded-full focus-visible:outline outline-2 outline-slate-400 -outline-offset-1 focus-visible:text-slate-100 focus-visible:bg-slate-800"
+        className="block md:hidden p-2 border border-slate-700 hover:bg-slate-700 text-slate-400 bg-slate-900 hover:text-slate-100 m-px rounded-full focus-visible:outline-2 outline-slate-400 -outline-offset-1 focus-visible:text-slate-100 focus-visible:bg-slate-800"
         aria-label="Open navigation menu"
         aria-expanded={expanded ? "true" : "false"}
       >
@@ -96,7 +96,7 @@ const MobileNavigationLink = ({ name, href, active }) => {
       <Link
         href={href}
         className={twMerge(
-          "flex items-center py-4 focus-visible:outline outline-2 outline-slate-300 -outline-offset-2 rounded-full -mx-4 px-5",
+          "flex items-center py-4 focus-visible:outline-2 outline-slate-300 -outline-offset-2 rounded-full -mx-4 px-5",
           active && "bg-slate-600 transition"
         )}
       >
