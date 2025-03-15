@@ -62,6 +62,12 @@ export default async function Uses() {
           href="https://amzn.to/47RxSa0"
         ></Thing>
         <Thing
+          name="Playstation Portal"
+          subtitle="AKA Dadstation"
+          href="https://amzn.to/3FxjBVH"
+        ></Thing>
+
+        <Thing
           name="Meta Quest 3"
           href="https://amzn.to/4dRdabE"
           subtitle="128GB"
