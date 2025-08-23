@@ -15,7 +15,7 @@ TL;DR: [Use polymorphism](#polymorphism-at-the-rescue)
 
 ## A small history about the Link component
 
-In the old days of Next.js 12, the Link component usage was a bit different from how is it today. You needed to wrap your `<a>` tag with his `<Link>` component and move the `href` attribute to the `Link`. Resulting in something like this:
+In the old days of Next.js 12, the Link component usage was a bit different from how it is today. You needed to wrap your `<a>` tag with a `<Link>` component and move the `href` attribute to the `Link`. Resulting in something like this:
 
 ```jsx
 // The Next.js 12 way
@@ -24,9 +24,9 @@ In the old days of Next.js 12, the Link component usage was a bit different from
 </Link>
 ```
 
-Today it looks like a nonsense, but we could assume that some important reason was behind this decission. And at least, it was easy to implement.
+Today it looks like nonsense, but we could assume that some important reason was behind this decision. And at least, it was easy to implement.
 
-But if you have something more complex, like a component with styles that should be reutilized, for example in a navigation bar, we needed to do somegthing even weirder. The component needs to use the `forwardRef` method and we still need to wrap each instance with the `<Link href="/">` component, but this time with one difference: a new prop is needed. You should specify that you want to pass the `href` prop to your component. **What a mess**.
+But if you have something more complex, like a component with styles that should be reutilized, for example in a navigation bar, we needed to do something even weirder. The component needed to use the `forwardRef` method and we still need to wrap each instance with the `<Link href="/">` component, but this time with a key difference: a new prop is needed. You had to specify that you want to pass the `href` prop to your component. **What a mess**.
 
 ```jsx /passHref/ /forwardRef/
 // Still the Next.js 12 way
@@ -65,11 +65,11 @@ When Next.js 13 was released, by the end of 2022, they released a new approach. 
 </Link>
 ```
 
-They wanted to simplify, but they made it actually worse in some scenarios because you need even one more prop. If you use [styled components](https://styled-components.com/), if you are using another libraries, or you have your custom components. You're getting in troubles.
+They wanted to simplify, but they made it actually worse in some scenarios because you needed even one more prop. If you were using [styled components](https://styled-components.com/), if you were using another libraries, or you have your custom components. You were getting into trouble.
 
 The legacyBehavior prop was intended as a transition thing, like: we allow you to upgrade to Next.js 13, but keep in mind that this behavior should change.
 
-On further releases, a warning about the `legacyBehavior` prop was marked as deprecated, and now with the release of Next 16 it would dissappear completely. Hope you have updated everything in your codebase.
+In further releases, a warning about the `legacyBehavior` prop was marked as deprecated, and now with the release of Next 16 it will disappear completely. Hope you have updated everything in your codebase.
 
 Then... what's the solution with our code?
 
