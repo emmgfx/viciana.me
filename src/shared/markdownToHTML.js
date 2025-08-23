@@ -5,6 +5,7 @@ import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import { remarkAlert } from "remark-github-blockquote-alert";
 
@@ -41,6 +42,7 @@ export default async function markdownToHtml(markdown) {
       keepBackground: false,
     })
     .use(rehypeStringify)
+    .use(rehypeSlug)
     .process(markdown);
   return file.toString();
 }
