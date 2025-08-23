@@ -117,4 +117,8 @@ import Link from "next/link";
 </Button>;
 ```
 
+## An ending
+
+Some people are very upset with this kind of change, as if the changes were made only to annoy them. My point of view is that it’s normal that libraries and frameworks evolve and change how they should be used. Everything changes, and if you keep your code as up to date as you can, with patterns like this or with slots like Radix / Shadcn do, it's always easier to perform smooth framework upgrades.
+
 [Photo by Diego Madrigal on Pexels](https://www.pexels.com/es-es/foto/mariposa-negra-roja-y-blanca-en-la-foto-de-primer-plano-668424/)
