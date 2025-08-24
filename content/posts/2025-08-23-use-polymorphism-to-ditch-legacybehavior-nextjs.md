@@ -1,11 +1,12 @@
 ---
 title: "Use polymorphism to ditch the legacyBehavior prop in Next.js"
-description: "asdad"
+description: "You can't use anymore the legacyBehavior prop with the Link components"
 date: 2025-08-23T14:34:08.832Z
 preview: ""
 draft: false
 tags: ["Next.js", "React", "Polymorphism"]
-categories: []
+categories:
+  - English
 image: "/post_images/pexels-diego-madrigal-162471-668424.jpg"
 type: ""
 excerpt: You can't use anymore the legacyBehavior prop with the Link components and you can use the polymorphic component pattern to achieve a clean solution.
