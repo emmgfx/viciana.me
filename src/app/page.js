@@ -18,7 +18,7 @@ export default async function Home() {
         <IntroText>
           I&apos;m Josep Viciana (aka emmgfx), a software developer based in
           Barcelona. I have collaborated on projects for both tiny and
-          internationally renowned companies and organizations. I've co-founded
+          internationally renowned companies and organizations. I co-founded
           Marmota and most important: I&apos;ve unlocked all the Sekiro
           achievements, twice.
         </IntroText>
