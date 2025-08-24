@@ -9,7 +9,7 @@ import { getAllPosts } from "@/shared/api";
 import Link from "next/link";
 
 export default async function Home() {
-  const posts = getAllPosts(0, 2);
+  const posts = getAllPosts(0, 3);
 
   return (
     <>
