@@ -11,8 +11,23 @@ import Link from "next/link";
 export default async function Home() {
   const posts = getAllPosts(0, 3);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Josep Viciana",
+    url: "https://www.viciana.me/",
+  };
+
   return (
     <>
+      <Script
+        id="home-schema"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
       <Intro>
         <IntroTitle>Software developer, frontend ninja and gamer.</IntroTitle>
         <IntroText>

@@ -36,6 +36,7 @@ export default async function AboutMe() {
       <Script
         id="about-me-schema"
         type="application/ld+json"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLd),
         }}
