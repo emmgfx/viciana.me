@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Script from "next/script";
+
 import { ArticlesList } from "@/components/ArticlesList";
 import { Card } from "@/components/Card";
 import { Intro, IntroBottom, IntroText, IntroTitle } from "@/components/Intro";
@@ -6,7 +9,6 @@ import { PostItemSmall } from "@/components/PostItemSmall";
 import { SocialLinks } from "@/components/SocialLinks";
 import { WorkItem } from "@/components/WorkItem";
 import { getAllPosts } from "@/shared/api";
-import Link from "next/link";
 
 export default async function Home() {
   const posts = getAllPosts(0, 3);
