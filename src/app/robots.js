@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.viciana.me.com/sitemap.xml",
+    sitemap: "https://www.viciana.me/sitemap.xml",
   };
 }
