@@ -31,7 +31,7 @@ export default async function Home() {
         }}
       />
       <Intro>
-        <IntroTitle>Software developer, frontend ninja and gamer.</IntroTitle>
+        <IntroTitle>Software developer, frontend ninja.</IntroTitle>
         <IntroText>
           I&apos;m Josep Viciana (aka emmgfx), a software developer based in
           Barcelona. I have collaborated on projects for both tiny and
