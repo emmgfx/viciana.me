@@ -96,7 +96,7 @@ export default async function Article(props) {
           __html: JSON.stringify(jsonLd),
         }}
       />
-      <PostDetail post={post} />;
+      <PostDetail post={post} />
     </>
   );
 }
