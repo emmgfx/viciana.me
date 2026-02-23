@@ -5,5 +5,7 @@ export const usePrevious = (value) => {
   useEffect(() => {
     ref.current = value;
   }, [value]);
+
+  // eslint-disable-next-line react-hooks/refs
   return ref.current;
 };
