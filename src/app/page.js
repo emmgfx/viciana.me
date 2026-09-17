@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Script from "next/script";
 
 import { ArticlesList } from "@/components/ArticlesList";
 import { Card } from "@/components/Card";
@@ -22,10 +21,8 @@ export default async function Home() {
 
   return (
     <>
-      <Script
-        id="home-schema"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLd),
         }}

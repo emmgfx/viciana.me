@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 
 import { Intro, IntroTitle, IntroText } from "@/components/Intro";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -33,10 +32,8 @@ const jsonLd = {
 export default async function AboutMe() {
   return (
     <>
-      <Script
-        id="about-me-schema"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLd),
         }}

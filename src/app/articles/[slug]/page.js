@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Script from "next/script";
 
 import { PostDetail } from "@/components/PostDetail";
 import { getPostBySlug, getPostSlugs } from "@/shared/api";
@@ -88,10 +87,8 @@ export default async function Article(props) {
 
   return (
     <>
-      <Script
-        id="post-schema"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLd),
         }}
