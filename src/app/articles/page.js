@@ -3,10 +3,17 @@ import { Intro, IntroText, IntroTitle } from "@/components/Intro";
 import { Pager } from "@/components/Pager";
 
 import { getAllPosts, getPostsCount } from "@/shared/api";
-import { POSTS_PER_PAGE } from "@/shared/constants";
+import { BASE_URL, POSTS_PER_PAGE } from "@/shared/constants";
 
 export const metadata = {
   title: "Articles",
+  alternates: {
+    canonical: "/articles",
+  },
+  openGraph: {
+    type: "website",
+    url: "/articles",
+  },
 };
 
 export default async function Articles(props) {
@@ -16,8 +23,37 @@ export default async function Articles(props) {
 
   const { page: currentPage = 1 } = params;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${BASE_URL}/articles`,
+    name: "Articles",
+    description: "Latest articles written by me, for no reason",
+    inLanguage: "en",
+    author: {
+      "@type": "Person",
+      name: "Josep Viciana",
+      alternateName: "emmgfx",
+      url: BASE_URL,
+    },
+    // Not `posts`: that one is capped to a page worth of articles.
+    blogPost: getAllPosts(0, 999).map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.data.title,
+      description: post.data.description,
+      url: `${BASE_URL}/articles/${post.slug}`,
+      datePublished: new Date(post.data.date).toISOString(),
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
       <Intro>
         <IntroTitle>Articles</IntroTitle>
         <IntroText>Latest articles written by me, for no reason</IntroText>

@@ -5,6 +5,24 @@ import { Pager } from "@/components/Pager";
 import { getAllPosts, getPostsCount } from "@/shared/api";
 import { POSTS_PER_PAGE } from "@/shared/constants";
 
+export async function generateMetadata({ params }) {
+  const { page } = await params;
+  // Page 1 is the same list as /articles, so it points there instead of
+  // competing with it.
+  const path = Number(page) === 1 ? "/articles" : `/articles/page/${page}`;
+
+  return {
+    title: Number(page) === 1 ? "Articles" : `Articles — page ${page}`,
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      type: "website",
+      url: path,
+    },
+  };
+}
+
 export async function generateStaticParams() {
   const posts = getAllPosts(); // [{...post}, ...]
   const pages = Math.ceil(posts.length / POSTS_PER_PAGE); // 3

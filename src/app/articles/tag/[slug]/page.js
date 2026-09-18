@@ -3,6 +3,22 @@ import { Intro, IntroText, IntroTitle } from "@/components/Intro";
 import { getAllPosts, getAllTags } from "@/shared/api";
 import { notFound } from "next/navigation";
 
+export async function generateMetadata({ params }) {
+  const slug = (await params).slug;
+  const tag = getAllTags().find((item) => item.slug === slug);
+
+  return {
+    title: tag ? `Articles tagged «${tag.name}»` : "Articles by tag",
+    alternates: {
+      canonical: `/articles/tag/${slug}`,
+    },
+    openGraph: {
+      type: "website",
+      url: `/articles/tag/${slug}`,
+    },
+  };
+}
+
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
   return getAllTags().map((tag) => ({
