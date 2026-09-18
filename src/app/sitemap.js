@@ -30,7 +30,7 @@ export default function sitemap() {
       priority: 0.6,
     })),
     {
-      url: getUrl("/uses"),
+      url: getUrl("/projects"),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
