@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import { PostDetail } from "@/components/PostDetail";
 import { getPostBySlug, getPostSlugs } from "@/shared/api";
+import { BASE_URL } from "@/shared/constants";
 
 export async function generateMetadata({ params }, parent) {
   const slug = (await params).slug;
@@ -53,20 +54,21 @@ export default async function Article(props) {
     "@type": "BlogPosting",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id":
-        "https://www.viciana.me/articles/2025-08-23-use-polymorphism-to-ditch-legacybehavior-nextjs",
+      "@id": `${BASE_URL}/articles/${post.slug}`,
     },
     headline: post.data.title,
     description: post.data.description,
-    image: "https://www.viciana.me/images/polymorphism-nextjs-cover.jpg",
+    image: post.data.image
+      ? `${BASE_URL}${post.data.image}`
+      : `${BASE_URL}/avatar.jpeg`,
     author: {
       "@type": "Person",
       name: "Josep Viciana",
       alternateName: "emmgfx",
       description: "Software developer",
-      image: "https://www.viciana.me/avatar.jpeg",
+      image: `${BASE_URL}/avatar.jpeg`,
       sameAs: [
-        "https://www.viciana.me",
+        BASE_URL,
         "https://www.emm-gfx.net",
         "https://x.com/josep_viciana",
         "https://www.linkedin.com/in/josep-viciana/",
@@ -78,7 +80,7 @@ export default async function Article(props) {
       name: "viciana.me",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.viciana.me/avatar.jpeg",
+        url: `${BASE_URL}/avatar.jpeg`,
       },
     },
     datePublished: post.data.date,

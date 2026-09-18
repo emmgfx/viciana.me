@@ -8,6 +8,7 @@ import { PostItemSmall } from "@/components/PostItemSmall";
 import { SocialLinks } from "@/components/SocialLinks";
 import { WorkItem } from "@/components/WorkItem";
 import { getAllPosts } from "@/shared/api";
+import { BASE_URL } from "@/shared/constants";
 
 export default async function Home() {
   const posts = getAllPosts(0, 3);
@@ -16,7 +17,7 @@ export default async function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Josep Viciana",
-    url: "https://www.viciana.me/",
+    url: `${BASE_URL}/`,
   };
 
   return (
