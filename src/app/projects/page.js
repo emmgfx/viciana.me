@@ -6,6 +6,13 @@ export const metadata = {
   title: "Projects",
   description:
     "Things I have built that made it to the finish line: a game recommender and a few React packages.",
+  alternates: {
+    canonical: "/projects",
+  },
+  openGraph: {
+    type: "website",
+    url: "/projects",
+  },
 };
 
 const FEATURED = {

@@ -11,7 +11,15 @@ export async function generateMetadata({ params }, parent) {
   return {
     title: post.data.title,
     description: post.data.description,
+    alternates: {
+      canonical: `/articles/${slug}`,
+    },
     openGraph: {
+      type: "article",
+      url: `/articles/${slug}`,
+      publishedTime: new Date(post.data.date).toISOString(),
+      authors: ["Josep Viciana"],
+      tags: post.data.tags.map((tag) => tag.name),
       images: [
         {
           url: `/api/og?title=${post.data.title}&tags=${post.data.tags

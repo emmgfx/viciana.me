@@ -21,6 +21,18 @@ export const metadata = {
   },
   description:
     "Some of my thoughts, projects, photos. I usually write about technology.",
+  alternates: {
+    canonical: "/",
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Josep Viciana",
+    locale: "en_GB",
+  },
 };
 
 export const viewport = {

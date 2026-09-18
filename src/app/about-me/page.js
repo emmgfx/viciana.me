@@ -7,6 +7,13 @@ import { BASE_URL } from "@/shared/constants";
 
 export const metadata = {
   title: "About me",
+  alternates: {
+    canonical: "/about-me",
+  },
+  openGraph: {
+    type: "profile",
+    url: "/about-me",
+  },
 };
 
 const jsonLd = {
