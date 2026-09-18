@@ -1,7 +1,7 @@
 import { getAllPosts, getAllTags } from "@/shared/api";
+import { BASE_URL } from "@/shared/constants";
 
 export default function sitemap() {
-  const BASE_URL = "https://www.viciana.me";
   const getUrl = (path) => new URL(path, BASE_URL).toString();
 
   return [

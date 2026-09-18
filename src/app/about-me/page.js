@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { Intro, IntroTitle, IntroText } from "@/components/Intro";
 import { SocialLinks } from "@/components/SocialLinks";
+import { BASE_URL } from "@/shared/constants";
 
 export const metadata = {
   title: "About me",
@@ -18,9 +19,9 @@ const jsonLd = {
     name: "Josep Viciana",
     alternateName: "emmgfx",
     description: "Software developer",
-    image: "https://www.viciana.me/avatar.jpeg",
+    image: `${BASE_URL}/avatar.jpeg`,
     sameAs: [
-      "https://www.viciana.me",
+      BASE_URL,
       "https://www.emm-gfx.net",
       "https://x.com/josep_viciana",
       "https://www.linkedin.com/in/josep-viciana/",

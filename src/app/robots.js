@@ -1,9 +1,11 @@
+import { BASE_URL } from "@/shared/constants";
+
 export default function robots() {
   return {
     rules: {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.viciana.me/sitemap.xml",
+    sitemap: `${BASE_URL}/sitemap.xml`,
   };
 }

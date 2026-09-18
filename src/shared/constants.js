@@ -1,3 +1,5 @@
+export const BASE_URL = "https://www.viciana.me";
+
 export const POSTS_PER_PAGE = 5;
 
 export const NAVIGATION = [

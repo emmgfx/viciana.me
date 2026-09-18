@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { BASE_URL } from "@/shared/constants";
 
 import "./globals.css";
 import "./code.css";
@@ -11,6 +12,9 @@ import "./code.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  // Without this, relative Open Graph and Twitter image URLs resolve against
+  // localhost and break when the link is shared.
+  metadataBase: new URL(BASE_URL),
   title: {
     template: "%s - Josep Viciana",
     default: "Josep Viciana",
