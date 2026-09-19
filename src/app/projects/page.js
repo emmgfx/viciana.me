@@ -5,7 +5,7 @@ import { Intro, IntroText, IntroTitle } from "@/components/Intro";
 export const metadata = {
   title: "Projects",
   description:
-    "Things I have built that made it to the finish line: a game recommender and a few React packages.",
+    "Things I have built that made it to the finish line: a game recommender, a video converter for the TV and a few React packages.",
   alternates: {
     canonical: "/projects",
   },
@@ -15,36 +15,40 @@ export const metadata = {
   },
 };
 
-const FEATURED = {
-  name: "Stadiaffinity",
-  startYear: 2022,
-  endYear: 2024,
-  description:
-    "A recommender for Google Stadia: you rated the games you had played and it suggested what to play next, based on what people with similar taste enjoyed. It ran until Google shut Stadia down.",
-  stack: ["Next.js", "PostgreSQL"],
-  href: "https://www.stadiaffinity.com",
-  githubHref: "https://github.com/emmgfx/stadiaffinity.com",
-  articleSlug: "2024-08-11-the-technology-behind-stadiaffinity",
-};
+// Newest first.
+const FEATURED = [
+  {
+    name: "Carta",
+    startYear: 2026,
+    description:
+      "A macOS app that gets downloaded videos ready to play on a TV. It probes every track in the MKV and remuxes to MP4, stream copying H.264 video and AAC or AC3 audio untouched, transcoding only what the TV cannot decode, and demuxing text subtitles to .srt.",
+    stack: ["Rust", "Tauri"],
+    githubHref: "https://github.com/emmgfx/carta",
+    downloadHref: "https://github.com/emmgfx/carta/releases/latest",
+  },
+  {
+    name: "Stadiaffinity",
+    startYear: 2022,
+    endYear: 2024,
+    description:
+      "A recommender for Google Stadia: you rated the games you had played and it suggested what to play next, based on what people with similar taste enjoyed. It ran until Google shut Stadia down.",
+    stack: ["Next.js", "PostgreSQL"],
+    href: "https://www.stadiaffinity.com",
+    githubHref: "https://github.com/emmgfx/stadiaffinity.com",
+    articleSlug: "2024-08-11-the-technology-behind-stadiaffinity",
+  },
+];
 
+// Newest first.
 const PACKAGES = [
   {
     name: "@emmgfx/scroll-hint",
     startYear: 2026,
     description:
       "Scroll edge indicators for React. Shows shadows or solid lines on the edges of a scrollable container to hint there is more content, using IntersectionObserver instead of scroll events.",
-    href: "https://scroll-hint.vercel.app",
+    demoHref: "https://scroll-hint.vercel.app",
     githubHref: "https://github.com/emmgfx/scroll-hint",
     npmHref: "https://www.npmjs.com/package/@emmgfx/scroll-hint",
-  },
-  {
-    name: "@emmgfx/activity-tabs",
-    startYear: 2025,
-    description:
-      "Headless tabs for React built on the Activity API, so hidden panels keep their state instead of unmounting. Switch away from a tab and come back: scroll position and inputs are still there.",
-    href: "https://react-activity-tabs.vercel.app/",
-    githubHref: "https://github.com/emmgfx/activity-tabs",
-    npmHref: "https://www.npmjs.com/package/@emmgfx/activity-tabs",
   },
   {
     name: "@emmgfx/logger",
@@ -53,6 +57,15 @@ const PACKAGES = [
       "Color coded logger for JavaScript and TypeScript that works the same in the browser and in Node, with buffers and source persistence to keep the noise down without losing context.",
     githubHref: "https://github.com/emmgfx/logger",
     npmHref: "https://www.npmjs.com/package/@emmgfx/logger",
+  },
+  {
+    name: "@emmgfx/activity-tabs",
+    startYear: 2025,
+    description:
+      "Headless tabs for React built on the Activity API, so hidden panels keep their state instead of unmounting. Switch away from a tab and come back: scroll position and inputs are still there.",
+    demoHref: "https://react-activity-tabs.vercel.app/",
+    githubHref: "https://github.com/emmgfx/activity-tabs",
+    npmHref: "https://www.npmjs.com/package/@emmgfx/activity-tabs",
   },
 ];
 
@@ -67,7 +80,11 @@ export default function Projects() {
         </IntroText>
       </Intro>
 
-      <Featured {...FEATURED} />
+      <div className="space-y-16">
+        {FEATURED.map((item) => (
+          <Featured key={item.githubHref} {...item} />
+        ))}
+      </div>
 
       <div className="h-20" />
 
@@ -99,6 +116,7 @@ const Featured = ({
   description,
   stack,
   href,
+  downloadHref,
   githubHref,
   articleSlug,
 }) => {
@@ -126,9 +144,9 @@ const Featured = ({
         <div className="h-4" />
         <Links
           href={href}
+          downloadHref={downloadHref}
           githubHref={githubHref}
           articleSlug={articleSlug}
-          linkLabel="Website"
         />
       </div>
       <span className="order-0 text-slate-400 text-sm font-semibold mt-2 hidden md:block">
@@ -143,7 +161,7 @@ const Package = ({
   startYear,
   endYear,
   description,
-  href,
+  demoHref,
   githubHref,
   npmHref,
 }) => {
@@ -160,7 +178,11 @@ const Package = ({
         <div className="h-3" />
         <p className="text-sm text-slate-400 leading-relaxed">{description}</p>
         <div className="h-4" />
-        <Links href={href} githubHref={githubHref} npmHref={npmHref} />
+        <Links
+          demoHref={demoHref}
+          githubHref={githubHref}
+          npmHref={npmHref}
+        />
       </div>
       <span className="order-0 text-slate-400 text-sm font-semibold mt-1 hidden md:block">
         {years}
@@ -169,10 +191,19 @@ const Package = ({
   );
 };
 
-const Links = ({ href, npmHref, githubHref, articleSlug, linkLabel }) => {
+const Links = ({
+  href,
+  demoHref,
+  downloadHref,
+  npmHref,
+  githubHref,
+  articleSlug,
+}) => {
   return (
     <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-pink-500">
-      {href && <ExternalItem href={href}>{linkLabel ?? "Demo"}</ExternalItem>}
+      {href && <ExternalItem href={href}>Website</ExternalItem>}
+      {demoHref && <ExternalItem href={demoHref}>Demo</ExternalItem>}
+      {downloadHref && <ExternalItem href={downloadHref}>Download</ExternalItem>}
       {npmHref && <ExternalItem href={npmHref}>npm</ExternalItem>}
       <ExternalItem href={githubHref}>GitHub</ExternalItem>
       {articleSlug && (
