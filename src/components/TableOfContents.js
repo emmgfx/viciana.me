@@ -42,7 +42,7 @@ export const TableOfContents = ({ headings }) => {
           <List headings={headings} activeId={activeId} />
         </div>
       </details>
-      <div className="hidden lg:block sticky top-24">
+      <div className="hidden lg:block">
         <Label />
         <div className="h-4" />
         <List headings={headings} activeId={activeId} />

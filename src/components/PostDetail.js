@@ -38,7 +38,7 @@ export const PostDetail = async ({ post }) => {
         </>
       )}
 
-      <div className="flex flex-col lg:grid lg:grid-cols-4 lg:gap-12">
+      <div className="flex flex-col lg:grid lg:grid-cols-4 lg:gap-12 lg:items-start">
         <div
           className={[
             // Tailwind Prose
@@ -78,7 +78,7 @@ export const PostDetail = async ({ post }) => {
           dangerouslySetInnerHTML={{ __html: html }}
         />
         {headings.length > 2 && (
-          <div className="order-1 lg:order-2 mb-8 lg:mb-0">
+          <div className="order-1 lg:order-2 mb-8 lg:mb-0 lg:sticky lg:top-24">
             <TableOfContents headings={headings} />
           </div>
         )}
