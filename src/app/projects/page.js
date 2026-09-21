@@ -5,7 +5,7 @@ import { Intro, IntroText, IntroTitle } from "@/components/Intro";
 export const metadata = {
   title: "Projects",
   description:
-    "Things I have built that made it to the finish line: a game recommender, a video converter for the TV and a few React packages.",
+    "Things I have built that made it to the finish line: a self-hosted music player, a video converter for the TV, a game recommender and a few React packages.",
   alternates: {
     canonical: "/projects",
   },
@@ -25,6 +25,14 @@ const FEATURED = [
     stack: ["Rust", "Tauri"],
     githubHref: "https://github.com/emmgfx/carta",
     downloadHref: "https://github.com/emmgfx/carta/releases/latest",
+  },
+  {
+    name: "Devicelost",
+    startYear: 2026,
+    description:
+      "A self-hosted music player: your own library instead of a subscription, running off a Raspberry Pi 4 at home. Invite-only, with passkeys or a password to get in. Three clients over the same library: a web app, a native Android client in Kotlin, and Android Auto in the car. Mine holds over two weeks of uninterrupted music.",
+    stack: ["Next.js", "PostgreSQL", "Kotlin"],
+    githubHref: "https://github.com/emmgfx/devicelost",
   },
   {
     name: "Stadiaffinity",
