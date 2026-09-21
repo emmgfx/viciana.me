@@ -60,6 +60,26 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+
+  /* Lets height animate to and from `auto`, which is what a details needs to
+     open smoothly. Browsers without it just snap open, as they did before. */
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  details::details-content {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      height 250ms ease,
+      opacity 250ms ease;
+  }
+
+  details[open]::details-content {
+    height: auto;
+    opacity: 1;
+  }
 }
 
 .markdown-alert {
