@@ -33,13 +33,13 @@ export const TableOfContents = ({ headings }) => {
 
   return (
     <nav aria-label="Table of contents" className="w-full">
-      <details className="group lg:hidden rounded-lg border border-slate-700 bg-slate-800/40 transition-colors open:border-slate-600 open:bg-slate-800/60 open:shadow-lg open:shadow-slate-950/50">
-        <summary className="flex items-center justify-between gap-4 px-4 py-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden rounded-lg hover:bg-slate-800/40 [&_span]:text-slate-300 group-open:border-b group-open:border-slate-700 group-open:rounded-b-none group-open:[&_span]:text-slate-100">
+      <details className="group lg:hidden rounded-lg border border-slate-700 bg-slate-800/40 transition-colors open:border-slate-600 open:bg-slate-800/60 open:shadow-lg open:shadow-slate-950/50 details-content:h-0 open:details-content:h-auto details-content:opacity-0 open:details-content:opacity-100 details-content:[interpolate-size:allow-keywords] details-content:transition-all details-content:duration-300 details-content:overflow-hidden details-content:transition-discrete">
+        <summary className="flex items-center justify-between gap-4 px-4 py-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden rounded-lg hover:bg-slate-800/40 [&_span]:text-slate-300 group-open:[&_span]:text-slate-100">
           <Label />
           <ChevronDownIcon className="size-4 text-slate-400 transition-transform group-open:rotate-180 group-open:text-slate-200" />
         </summary>
-        <div className="px-4 py-4">
-          <List headings={headings} activeId={activeId} />
+        <div className="border-t border-slate-700 px-4 py-4">
+          <PlainList headings={headings} />
         </div>
       </details>
       <div className="hidden lg:block">
@@ -73,6 +73,26 @@ const List = ({ headings, activeId }) => {
               activeId === id
                 ? "border-pink-500 text-slate-200"
                 : "border-transparent text-slate-500 hover:text-slate-300",
+            ].join(" ")}
+          >
+            {text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+const PlainList = ({ headings }) => {
+  return (
+    <ul className="space-y-3">
+      {headings.map(({ id, text, level }) => (
+        <li key={id}>
+          <a
+            href={`#${id}`}
+            className={[
+              "block text-sm text-slate-200 hover:text-white",
+              level === 3 ? "pl-4" : "",
             ].join(" ")}
           >
             {text}
