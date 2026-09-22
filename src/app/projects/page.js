@@ -148,9 +148,10 @@ const Featured = ({
         <div className="h-4" />
         <p className="text-slate-400 leading-relaxed">{description}</p>
         <div className="h-4" />
-        <p className="text-xs text-slate-500">{stack.join(" · ")}</p>
+        <p className="text-xs text-slate-400">{stack.join(" · ")}</p>
         <div className="h-4" />
         <Links
+          name={name}
           href={href}
           downloadHref={downloadHref}
           githubHref={githubHref}
@@ -187,6 +188,7 @@ const Package = ({
         <p className="text-sm text-slate-400 leading-relaxed">{description}</p>
         <div className="h-4" />
         <Links
+          name={name}
           demoHref={demoHref}
           githubHref={githubHref}
           npmHref={npmHref}
@@ -200,6 +202,7 @@ const Package = ({
 };
 
 const Links = ({
+  name,
   href,
   demoHref,
   downloadHref,
@@ -209,29 +212,44 @@ const Links = ({
 }) => {
   return (
     <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-pink-500">
-      {href && <ExternalItem href={href}>Website</ExternalItem>}
-      {demoHref && <ExternalItem href={demoHref}>Demo</ExternalItem>}
-      {downloadHref && <ExternalItem href={downloadHref}>Download</ExternalItem>}
-      {npmHref && <ExternalItem href={npmHref}>npm</ExternalItem>}
-      <ExternalItem href={githubHref}>GitHub</ExternalItem>
+      {href && (
+        <ExternalItem href={href} project={name}>
+          Website
+        </ExternalItem>
+      )}
+      {demoHref && (
+        <ExternalItem href={demoHref} project={name}>
+          Demo
+        </ExternalItem>
+      )}
+      {downloadHref && (
+        <ExternalItem href={downloadHref} project={name}>
+          Download
+        </ExternalItem>
+      )}
+      {npmHref && (
+        <ExternalItem href={npmHref} project={name}>
+          npm
+        </ExternalItem>
+      )}
+      <ExternalItem href={githubHref} project={name}>
+        GitHub
+      </ExternalItem>
       {articleSlug && (
         <Link href={`/articles/${articleSlug}`} className="hover:underline">
           Read the article
+          <span className="sr-only"> about {name}</span>
         </Link>
       )}
     </div>
   );
 };
 
-const ExternalItem = ({ href, children }) => {
+const ExternalItem = ({ href, project, children }) => {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="hover:underline"
-    >
+    <a href={href} target="_blank" rel="noreferrer" className="hover:underline">
       {children}
+      <span className="sr-only"> for {project} (opens in a new tab)</span>
     </a>
   );
 };

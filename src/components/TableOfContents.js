@@ -53,7 +53,7 @@ export const TableOfContents = ({ headings }) => {
 
 const Label = () => {
   return (
-    <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+    <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">
       On this page
     </span>
   );
@@ -86,7 +86,7 @@ const List = ({ headings, activeId }) => {
               level === 3 ? "pl-7" : "pl-4",
               activeId === id
                 ? "border-pink-500 text-slate-200"
-                : "border-transparent text-slate-500 hover:text-slate-300",
+                : "border-transparent text-slate-400 hover:text-slate-200",
             ].join(" ")}
           >
             {text}

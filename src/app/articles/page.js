@@ -7,6 +7,8 @@ import { BASE_URL, POSTS_PER_PAGE } from "@/shared/constants";
 
 export const metadata = {
   title: "Articles",
+  description:
+    "Everything I write: technology, the things I build, and whatever else I feel like putting into words.",
   alternates: {
     canonical: "/articles",
   },

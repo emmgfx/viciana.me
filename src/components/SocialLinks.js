@@ -43,6 +43,7 @@ export const SocialLinks = ({ className, withTitles = false }) => {
           >
             <Icon className="size-7" />
             {withTitles ? title : <span className="sr-only">{title}</span>}
+            <span className="sr-only"> (opens in a new tab)</span>
           </a>
         </li>
       ))}

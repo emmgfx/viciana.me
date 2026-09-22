@@ -7,6 +7,8 @@ import { BASE_URL } from "@/shared/constants";
 
 export const metadata = {
   title: "About me",
+  description:
+    "Frontend developer based in the outskirts of Barcelona, working remotely. Who I am and what I have worked on.",
   alternates: {
     canonical: "/about-me",
   },

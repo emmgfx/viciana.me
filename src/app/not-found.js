@@ -15,7 +15,7 @@ export default function NotFound() {
           ></iframe>
         </div>
         <div className="h-2" />
-        <p className="text-xs text-slate-500">
+        <p className="text-xs text-slate-400">
           <a href="https://giphy.com/gifs/the-simpsons-homer-simpson-disappear-q8C0Ljmy4F6Ss">
             via GIPHY
           </a>
