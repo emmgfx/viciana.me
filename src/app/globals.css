@@ -60,17 +60,6 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-
-  html {
-    scroll-padding-top: 2rem;
-  }
-
-  /* Animated scrolling can make people sensitive to motion feel sick. */
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
-  }
 }
 
 .markdown-alert {

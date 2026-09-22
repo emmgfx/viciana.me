@@ -43,6 +43,8 @@ export const PostDetail = async ({ post }) => {
           className={[
             // Tailwind Prose
             "prose max-w-none prose-invert lg:col-span-3 order-2 lg:order-1",
+            // Headings are anchor targets, so they need room above them
+            "prose-headings:scroll-mt-8",
             // General block styles
             "prose-pre:bg-slate-950",
             // "[&_div[data-rehype-pretty-code-fragment]]:bg-white",

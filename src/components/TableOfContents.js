@@ -59,6 +59,19 @@ const Label = () => {
   );
 };
 
+// Smoothing every anchor jump site-wide would also animate the scroll
+// restoration when navigating between pages, so it lives on the click here.
+const scrollToHeading = (event) => {
+  const hash = event.currentTarget.hash;
+  const target = document.getElementById(hash.slice(1));
+  if (!target) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  event.preventDefault();
+  target.scrollIntoView({ behavior: "smooth" });
+  history.pushState(null, "", hash);
+};
+
 const List = ({ headings, activeId }) => {
   return (
     <ul className="space-y-2 border-l border-slate-800">
@@ -66,6 +79,7 @@ const List = ({ headings, activeId }) => {
         <li key={id}>
           <a
             href={`#${id}`}
+            onClick={scrollToHeading}
             aria-current={activeId === id ? "location" : undefined}
             className={[
               "block border-l -ml-px py-0.5 text-sm transition-colors",
@@ -90,6 +104,7 @@ const PlainList = ({ headings }) => {
         <li key={id}>
           <a
             href={`#${id}`}
+            onClick={scrollToHeading}
             className={[
               "block text-sm text-slate-200 hover:text-white",
               level === 3 ? "pl-4" : "",
