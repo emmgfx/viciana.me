@@ -5,11 +5,13 @@ import { TableOfContents } from "./TableOfContents";
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, TagIcon } from "lucide-react";
+import { twMerge } from "tailwind-merge";
 
 export const PostDetail = async ({ post }) => {
   const { data: metadata, content } = post;
   let html = await markdownToHtml(content || "");
   const headings = getHeadings(content || "");
+  const hasTableOfContents = headings.length > 2;
 
   return (
     <article>
@@ -38,11 +40,17 @@ export const PostDetail = async ({ post }) => {
         </>
       )}
 
-      <div className="flex flex-col lg:grid lg:grid-cols-4 lg:gap-12 lg:items-start">
+      <div
+        className={twMerge([
+          "flex flex-col",
+          hasTableOfContents && "lg:grid lg:grid-cols-4 lg:gap-12 lg:items-start",
+        ])}
+      >
         <div
-          className={[
+          className={twMerge([
             // Tailwind Prose
-            "prose max-w-none prose-invert lg:col-span-3 order-2 lg:order-1",
+            "prose max-w-none prose-invert order-2 lg:order-1",
+            hasTableOfContents && "lg:col-span-3",
             // Headings are anchor targets, so they need room above them
             "prose-headings:scroll-mt-8",
             // General block styles
@@ -76,10 +84,10 @@ export const PostDetail = async ({ post }) => {
             "[&_mark[data-highlighted-chars]]:py-0.5",
             "[&_mark[data-highlighted-chars]]:rounded-full",
             "[&_img]:rounded-xl",
-          ].join(" ")}
+          ])}
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        {headings.length > 2 && (
+        {hasTableOfContents && (
           <div className="order-1 lg:order-2 mb-8 lg:mb-0 lg:sticky lg:top-24">
             <TableOfContents headings={headings} />
           </div>
