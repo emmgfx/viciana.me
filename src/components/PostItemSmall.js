@@ -12,7 +12,7 @@ export const PostItemSmall = async ({ post }) => {
         className="focus-visible:underline focus-visible:outline-hidden"
       >
         <span className="absolute bg-transparent hover:bg-slate-600/10 rounded-xl hover:-inset-y-4 hover:-inset-x-6 inset-0 transition-all"></span>
-        <h1 className="font-semibold text-slate-100">{metadata.title}</h1>
+        <h2 className="font-semibold text-slate-100">{metadata.title}</h2>
       </Link>
       <div className="h-2" />
       <DateFormatter

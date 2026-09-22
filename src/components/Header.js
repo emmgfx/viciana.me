@@ -11,7 +11,9 @@ export const Header = () => {
           href="/"
           className="focus-visible:underline focus-visible:outline-hidden"
         >
-          <h1 className="font-extrabold text-xl py-1.5">JOSEP VICIANA</h1>
+          <span className="block font-extrabold text-xl py-1.5">
+            JOSEP VICIANA
+          </span>
         </Link>
         <Navigation className="ml-auto hidden md:block" />
         <MobileNavigation />

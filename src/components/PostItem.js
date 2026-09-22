@@ -10,7 +10,7 @@ export const PostItem = async ({ post }) => {
       <div className="col-span-3 order-1 relative">
         <Link href={`/articles/${slug}`}>
           <span className="absolute bg-transparent hover:bg-slate-600/10 rounded-xl hover:-inset-y-4 hover:-inset-x-6 inset-0 transition-all"></span>
-          <h1 className="font-semibold text-slate-100">{metadata.title}</h1>
+          <h2 className="font-semibold text-slate-100">{metadata.title}</h2>
         </Link>
         <div className="md:hidden">
           <div className="h-4" />
